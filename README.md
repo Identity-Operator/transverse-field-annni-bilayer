@@ -10,6 +10,12 @@ model on the square lattice and on a bilayer near the multiphase point κ = 1/2,
 transverse field to order g⁸. It tests the result with stochastic series expansion (SSE) quantum Monte Carlo and
 thermodynamic integration, including a pre-registered test of the ⟨23⟩ phase.
 
+## Citing
+
+Archived on Zenodo: [doi:10.5281/zenodo.23133828](https://doi.org/10.5281/zenodo.23133828) (version v1.0.0; all
+versions: [doi:10.5281/zenodo.23133827](https://doi.org/10.5281/zenodo.23133827)). Please cite the paper; see
+`CITATION.cff`.
+
 ## Layout
 
 The directory structure is the one the scripts were run in. Run every script from the repository root.
