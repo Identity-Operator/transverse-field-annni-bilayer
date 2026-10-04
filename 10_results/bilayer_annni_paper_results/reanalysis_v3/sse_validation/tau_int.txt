@@ -1,0 +1,6 @@
+<3> 12x12 at g_c: tau_int(E) median 5.6, max 6.3 sweeps; tau_int(m_x) median 12.7, max 14.7 sweeps (257s)
+<3> 20x30 at g_c: tau_int(E) median 6.0, max 6.2 sweeps; tau_int(m_x) median 12.9, max 17.2 sweeps (1145s)
+<23> 20x30 at g_c: tau_int(E) median 5.7, max 6.1 sweeps; tau_int(m_x) median 12.3, max 14.2 sweeps (1148s)
+<3> 20x60 at g_c: tau_int(E) median 6.3, max 6.6 sweeps; tau_int(m_x) median 13.2, max 14.7 sweeps (2387s)
+<23> 20x60 at g_c: tau_int(E) median 5.6, max 6.3 sweeps; tau_int(m_x) median 12.1, max 15.6 sweeps (2378s)
+2x6 layer kappa=0.3 g=1.5 (ED-test crossover): tau_int(E) median 6.1, max 7.0; tau_int(m_x) median 48.5, max 76.2 sweeps

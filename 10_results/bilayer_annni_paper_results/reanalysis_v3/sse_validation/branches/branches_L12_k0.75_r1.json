@@ -1,0 +1,29 @@
+{
+  "args": {
+    "results_dir": "10_results/bilayer_annni_paper_results",
+    "part": "branches",
+    "L": 12,
+    "T": 0.15,
+    "kappa": 0.75,
+    "rperps": "0,1",
+    "rperp": 1.0,
+    "control_code": 3,
+    "control_g": 0.05,
+    "codes": "3,5,1",
+    "g_top": 4.5,
+    "g_max_up": 2.8,
+    "chains": 6,
+    "therm": null,
+    "meas": null,
+    "threads": 10
+  },
+  "numba": "0.60.0",
+  "ascending_wall_s": 357.03859305381775,
+  "descending_wall_s": 350.4764754772186,
+  "E_classical": {
+    "uniform": -1.75,
+    "<2>": -2.25,
+    "<3>": -2.083333333333333
+  },
+  "wall_s": 707.5261356830597
+}

@@ -1,0 +1,87 @@
+{
+ "csv": "10_results/bilayer_annni_paper_results/reanalysis_v3/sse_validation/branches/branches_L12_k0.75_r1.csv",
+ "groups": {
+  "kappa=0.75,rperp=1.0": {
+   "pairs": {
+    "ascending:<2>par vs ascending:<3>par": {
+     "g_star": 2.6902533521190635,
+     "g_star_ci68": [
+      2.679358452932295,
+      2.701623392550166
+     ],
+     "boot_frac_finite": 1.0
+    },
+    "ascending:<2>par vs ascending:FM": {
+     "g_star": NaN,
+     "g_star_ci68": null,
+     "boot_frac_finite": 0.0
+    },
+    "ascending:<2>par vs descending:random": {
+     "g_star": 2.693970794201575,
+     "g_star_ci68": [
+      2.6851970347477243,
+      2.702884617914684
+     ],
+     "boot_frac_finite": 1.0
+    },
+    "ascending:<3>par vs ascending:FM": {
+     "g_star": NaN,
+     "g_star_ci68": null,
+     "boot_frac_finite": 0.0
+    },
+    "ascending:<3>par vs descending:random": {
+     "g_star": 1.856555889901945,
+     "g_star_ci68": [
+      0.45017982653422733,
+      2.259674366773807
+     ],
+     "boot_frac_finite": 0.4685
+    },
+    "ascending:FM vs descending:random": {
+     "g_star": NaN,
+     "g_star_ci68": null,
+     "boot_frac_finite": 0.0
+    }
+   },
+   "perturbative_O_g2": {
+    "f": 0.08333333333333326,
+    "g_min_3_beats_2": 3.464101615137756,
+    "g_min_3_beats_FM": null
+   },
+   "cuts": {
+    "ascending:<2>par": [
+     NaN,
+     NaN,
+     NaN,
+     NaN,
+     NaN,
+     NaN
+    ],
+    "ascending:<3>par": [
+     NaN,
+     NaN,
+     NaN,
+     NaN,
+     NaN,
+     NaN
+    ],
+    "ascending:FM": [
+     1.6,
+     1.7,
+     1.6,
+     1.7,
+     1.6,
+     1.6
+    ],
+    "descending:random": [
+     NaN,
+     NaN,
+     NaN,
+     NaN,
+     NaN,
+     NaN
+    ]
+   }
+  }
+ }
+}

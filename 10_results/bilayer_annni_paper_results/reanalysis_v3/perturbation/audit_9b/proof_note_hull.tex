@@ -1,0 +1,84 @@
+% Proof note: O(g^4) phases at the <3>|<2> boundary. LaTeX fragment (REVTeX-compatible), not a full document.
+% Numbers verified in exact rationals: scratchpad/domain_form.py (closed forms vs per_column for 1167 sequences),
+% indep_rs.py (independent brute-force RS), e6_triples.py (O(g^6) range; see the last paragraph).
+
+\paragraph*{Assumptions.}
+(A1) Straight walls along $x$, $x$-uniform columns, parallel stacking for $r>0$, and $L_x\to\infty$. Moving a wall
+by one row takes $L_x$ flips ($r=0$) or $2L_x$ flips ($r>0$), so different wall configurations do not mix at any
+finite order, and each is treated by non-degenerate Rayleigh--Schr\"odinger theory at $T=0$.
+(A2) Every domain has at least two sites. A one-site domain costs $O(1)$.
+(A3) $\kappa=\tfrac12+kg^2+k_1g^4$ with $k=F/4$ and $F=6/[(2+r)(3+r)(5+r)]$, the $\langle3\rangle|\langle2\rangle$ line at
+$O(g^2)$. On this line a domain of length $n\ge4$ costs $\tfrac{g^2}{2}[(n-2)F-F_4]>0$ at $O(g^2)$, with
+$F_4=F-2/[(3+r)(4+r)(5+r)]$, whereas two- and three-site domains cost nothing. At $O(g^4)$ the competition is
+therefore among sequences of 2s and 3s only. Their energy per site is $k_1(1-4\rho)+W$, with
+$W=k\,e_2'+e_4$ evaluated at $\kappa=\tfrac12$.
+
+\paragraph*{Locality.}
+At $\kappa=\tfrac12$ and under (A2), the site $y\pm2$ lies either in the domain of $y$ or in the adjacent domain,
+never further away. Hence the field $h_y$, the flip cost $D_y=2h_y$ and $c_y=s_y(s_{y+2}+s_{y-2})$ depend only on the
+position of $y$ in its own domain (Table~\ref{tab:h}). The coupled pairs that enter $e_4$ are the $x$ bond and the
+rung, which join sites of the same column position, and the $y$ and $y2$ bonds, whose two sites lie either in one
+domain or on the two sides of a single wall. Therefore
+\begin{equation}
+W\,L=\sum_k\big[a(n_k)+b(n_k,n_{k+1})\big],
+\end{equation}
+where $L$ is the period in sites and $n_k$ the domain lengths. With
+$P(D,D',B)=-4B(D+D')/[(DD')^2(D+D'-4B)]$, and $D_1,\dots,D_n$ the flip costs along a domain,
+\begin{align}
+a(n)&=\sum_{i=1}^{n}\Big[-\frac{2k\,c_i}{D_i^2}+\frac1{D_i^3}+P(D_i,D_i,1)+\tfrac12P(D_i,D_i,r)\Big]
+      +\sum_{i=1}^{n-1}P(D_i,D_{i+1},1)+\sum_{i=1}^{n-2}P(D_i,D_{i+2},-\tfrac12),\nonumber\\
+b(n,n')&=P(X_n,X_{n'},-1)+P(Y_n,X_{n'},\tfrac12)+P(X_n,Y_{n'},\tfrac12).
+\end{align}
+The flip costs along a domain are $2(3{+}r),2(3{+}r)$ for $n=2$; $2(2{+}r),2(5{+}r),2(2{+}r)$ for $n=3$; and
+$2(2{+}r),2(4{+}r),2(3{+}r),\dots,2(4{+}r),2(2{+}r)$ for $n\ge4$. The values $c_i=-2,0,+2$ hold when both, one, or
+none of the sites $i\pm2$ lie across a wall. $X_n$ and $Y_n$ are the flip costs of the first and second site from
+the wall. Exact values:
+$r=0$: $a(2)=\tfrac{7}{1080}$, $a(3)=-\tfrac{59}{2000}$, $b(2,2)=-\tfrac1{720}$, $b(2,3)=-\tfrac1{67200}$,
+$b(3,3)=\tfrac3{400}$.
+$r=1$: $a(2)=\tfrac1{768}$, $a(3)=-\tfrac{271}{60480}$, $b(2,2)=-\tfrac3{8960}$, $b(2,3)=\tfrac1{10368}$,
+$b(3,3)=\tfrac5{3456}$.
+How the energy is split between $a$ and $b$ is a convention; only the cycle costs below are invariant. These
+formulas reproduce $W$ exactly for all 2/3 sequences with up to 10 domains, and for all sequences containing 4s
+or 5s with up to 6 domains.
+
+\paragraph*{Only $\langle2\rangle$, $\langle3\rangle$ and $\langle23\rangle$ can be stable.}
+Since $k_1(1-4\rho)L=\sum_k k_1(n_k-4)$, the $O(g^4)$ energy per site is $\sum_k C(n_k,n_{k+1})/\sum_k n_k$ with
+$C(n,n')=k_1(n-4)+a(n)+b(n,n')$. A periodic sequence is thus a closed walk on the complete directed graph, with
+loops, on the vertices $\{2,3\}$. The edge $n\to n'$ has cost $C(n,n')$ and length $n$, and the energy per site is
+total cost over total length. Every closed walk splits into simple cycles, and a ratio of sums with positive
+denominators is at least the smallest ratio among the parts (the mediant inequality). Equality requires every part
+to attain that smallest ratio. The simple cycles are $2\to2$, $3\to3$ and $2\to3\to2$, that is $\langle2\rangle$,
+$\langle3\rangle$ and $\langle23\rangle$. So for every $k_1$ the minimum over all sequences, of any length, is
+reached by one of these three. A sequence mixing different cycles can tie only on a phase boundary.
+
+\paragraph*{Degenerate block mixtures.}
+Let $N_{22}$, $N_{33}$ and $N_{23}=N_{32}$ count the consecutive domain pairs of a cyclic sequence. Then
+$L=2N_{22}+3N_{33}+5N_{23}$, the number of walls is $N_{22}+N_{33}+2N_{23}$, and the total cost is
+$N_{22}C_{2}+N_{33}C_{3}+N_{23}C_{23}$, with $C_2=C(2,2)$, $C_3=C(3,3)$ and $C_{23}=C(2,3)+C(3,2)$. Hence
+$(\rho,W)$ is the convex combination of the points of $\langle2\rangle$, $\langle3\rangle$ and $\langle23\rangle$
+with the site fractions $2N_{22}/L$, $3N_{33}/L$ and $5N_{23}/L$ as weights. Three consequences follow.
+Sequences without ``33'' ($\langle223\rangle$, $\langle2223\rangle$, $\langle22323\rangle,\dots$) lie exactly on the
+segment $\langle2\rangle$--$\langle23\rangle$. Sequences without ``22'' ($\langle233\rangle$, $\langle2333\rangle$,
+$\langle23233\rangle,\dots$) lie exactly on the segment $\langle23\rangle$--$\langle3\rangle$. Sequences containing
+both pairs lie strictly above the hull, because $\langle23\rangle$ lies strictly below the chord from
+$\langle3\rangle$ to $\langle2\rangle$, by $-619/504000$ at $r=0$ and $-667/3628800$ at $r=1$.
+With $W_{\langle2\rangle}=\tfrac{11}{4320}$, $W_{\langle3\rangle}=-\tfrac{11}{1500}$ and
+$W_{\langle23\rangle}=-\tfrac{34849}{7560000}$ at $r=0$ (and $\tfrac{13}{26880}$, $-\tfrac{367}{362880}$,
+$-\tfrac{2167}{3628800}$ at $r=1$), $\langle23\rangle$ is stable for
+$k_1\in(\tfrac{20591}{2016000},\tfrac{6011}{336000})$ at $r=0$ and $(\tfrac{167}{107520},\tfrac{1961}{725760})$ at
+$r=1$. Each window edge is itself a multiphase line at $O(g^4)$. On the $\langle23\rangle|\langle2\rangle$ edge all
+33-free sequences are degenerate; on the $\langle3\rangle|\langle23\rangle$ edge all 22-free sequences are.
+
+\paragraph*{Next order (range argument; see the numerical check below).}
+At $O(g^6)$ the connected clusters have at most three sites, for example $\{y,y+2,y+4\}$, so they span at most one
+intermediate domain, of length 2 or 3. The flip costs remain internal to their domains. The other $O(g^6)$ boundary
+terms, $k_1e_2'$, $\tfrac{k^2}{2}e_2''$ and $k\,e_4'$, have range at most two domains. Hence
+$W_6L=\sum_k t(n_{k-1},n_k,n_{k+1})$. Repeating the argument on the graph whose vertices are consecutive domain
+pairs shows the following. On the $\langle23\rangle|\langle2\rangle$ edge (vertices 22, 23, 32) the only simple
+cycles are $\langle2\rangle$, $\langle23\rangle$ and $\langle223\rangle$. On the $\langle3\rangle|\langle23\rangle$
+edge they are $\langle3\rangle$, $\langle23\rangle$ and $\langle233\rangle$. So at $O(g^6)$ at most one new phase can
+open in each gap: $\langle223\rangle$ or $\langle233\rangle$. No longer sequence can.
+% Check (e6_triples.py, exact rationals): e6*L equals a sum over domain triples with zero residual for all 2/3
+% sequences with up to 8 domains (71 sequences) at both r = 0 and r = 1, rank 5. The nearest-neighbour pair
+% form fails (residual 4.5e-4 at r = 0, 2.5e-5 at r = 1). <2223> lies on the <2>-<223> segment of W6 to 1e-16
+% (w6_indep.py).

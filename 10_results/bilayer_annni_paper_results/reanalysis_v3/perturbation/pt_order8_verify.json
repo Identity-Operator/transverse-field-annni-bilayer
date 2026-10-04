@@ -1,0 +1,49 @@
+{
+ "orders_2_6_equal_pt_order6": true,
+ "isolated_spin_E8_eq_5_over_D7": true,
+ "tfim_chain_E2_E4_E6_E8_per_spin": [
+  "-1/4",
+  "-1/64",
+  "-1/256",
+  "-25/16384"
+ ],
+ "tfim_chain_E8_eq_-25/16384": true,
+ "brute_force": [
+  {
+   "case": "J1-J2 ring, FM, kappa=0.3",
+   "equal_E2_E4_E6_E8": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "odd_orders_zero": true,
+   "E8": "-231661583971484375/30352880718268416",
+   "s": 1.5
+  },
+  {
+   "case": "random J1-J2 ring, FM",
+   "equal_E2_E4_E6_E8": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "odd_orders_zero": true,
+   "E8": "-1044850197674244368156999956475535983112442657731878769910270392503165964262324589892273025/5869487065777003155720063519963924635639035206086382466120824808776842343999988276141621248",
+   "s": 2.0
+  },
+  {
+   "case": "ladder 2x6 (J1-J2 legs, rungs r=1), FM, kappa=0.3",
+   "equal_E2_E4_E6_E8": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "odd_orders_zero": true,
+   "E8": "-8132823739648189172234375/584999062417188139752751104",
+   "s": 1.9
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+Table III crossings (rich/cubic): full grid vs grid truncated one step below the first cut
+  branches_L12_k0.47_r0.csv                first cut 1.60, grid to 1.50: full 0.9856(32)  truncated 0.9856(32)  diff +0.00000
+  branches_L12_k0.47_r1.csv                first cut 2.40, grid to 2.30: full 1.5484(26)  truncated 1.5484(26)  diff -0.00000
+  branches_L12_k0.48_r0.csv                first cut 1.50, grid to 1.40: full 0.8250(38)  truncated 0.8250(38)  diff -0.00001
+  branches_L12_k0.48_r1.csv                first cut 2.40, grid to 2.30: full 1.3017(41)  truncated 1.3017(41)  diff -0.00000
+  branches_L12_k0.49_r0.csv                first cut 1.50, grid to 1.40: full 0.5952(48)  truncated 0.5952(48)  diff +0.00000
+  branches_L12_k0.49_r1.csv                first cut 2.40, grid to 2.30: full 0.9542(57)  truncated 0.9542(57)  diff -0.00000
+  branches_L12_k0.51_r0.csv                first cut 1.60, grid to 1.50: full 0.4378(37)  truncated 0.4378(37)  diff +0.00000
+  branches_L12_k0.51_r1.csv                first cut 2.40, grid to 2.30: full 0.6794(51)  truncated 0.6794(51)  diff -0.00000
+  branches_L12_k0.52_r0.csv                first cut 1.60, grid to 1.50: full 0.6008(32)  truncated 0.6008(32)  diff +0.00000
+  branches_L12_k0.52_r1.csv                first cut 2.30, grid to 2.20: full 0.9367(57)  truncated 0.9367(57)  diff -0.00000
+  branches_L12_k0.53_r0.csv                first cut 1.60, grid to 1.50: full 0.7190(58)  truncated 0.7190(58)  diff +0.00000
+  branches_L12_k0.53_r1.csv                first cut 2.50, grid to 2.40: full 1.1258(49)  truncated 1.1258(49)  diff +0.00000
+  branches_L12_k0.5625_r0.csv              first cut 1.70, grid to 1.60: full 0.9832(48)  truncated 0.9832(48)  diff -0.00000
+  branches_L12_k0.5625_r1.csv              first cut 2.50, grid to 2.40: full 1.5390(42)  truncated 1.5390(42)  diff +0.00000
+  branches_L12_k0.625_r0.csv               first cut 1.80, grid to 1.70: full 1.3253(15)  truncated 1.3253(15)  diff -0.00001
+  branches_L12_k0.625_r1.csv               first cut 2.70, grid to 2.60: full 2.0258(23)  truncated 2.0258(23)  diff +0.00000
+  branches_L12_k0.75_r0.csv                first cut 2.10, grid to 2.00: full 1.8597(33)  truncated 1.8594(33)  diff -0.00027
+  branches_L24_k0.47_r0.csv                first cut 1.60, grid to 1.50: full 0.9862(18)  truncated 0.9862(18)  diff -0.00000
+  branches_L24_k0.53_r0.csv                first cut 1.60, grid to 1.50: full 0.7201(15)  truncated 0.7201(15)  diff +0.00000
+  fine_L12_k0.75_r0_h0.05.csv              first cut 2.10, grid to 2.05: full 1.8603(25)  truncated 1.8603(25)  diff +0.00000
+  max |diff| = 0.00027 over 20 crossings

@@ -1,0 +1,18 @@
+Power of the 14 pre-registered T1 comparisons (one-sided, p < 0.02275; noncentral t, Welch dof)
+  P1 A: se 0.76e-4 dof 20.5 t_crit -2.13 | expected t -6.59 -> power 1.000 | planned z 6.5 -> power 1.000 | observed t -6.53 pass
+  P1 B: se 0.99e-4 dof 20.2 t_crit -2.13 | expected t -5.06 -> power 0.997 | planned z 6.5 -> power 1.000 | observed t -7.30 pass
+  P3 A: se 0.66e-4 dof 17.5 t_crit -2.15 | expected t -5.98 -> power 1.000 | planned z 4.0 -> power 0.965 | observed t -6.49 pass
+  P3 B: se 0.34e-4 dof 21.6 t_crit -2.12 | expected t -11.76 -> power 1.000 | planned z 4.0 -> power 0.965 | observed t -14.51 pass
+  P2 A: se 0.86e-4 dof 18.9 t_crit -2.14 | expected t -25.80 -> power 1.000 | planned z 4.0 -> power 0.965 | observed t -26.79 pass
+  P2 B: se 1.22e-4 dof 18.0 t_crit -2.15 | expected t -18.21 -> power 1.000 | planned z 4.0 -> power 0.965 | observed t -25.16 pass
+  P4 A: se 0.82e-4 dof 19.9 t_crit -2.13 | expected t -13.99 -> power 1.000 | planned z 4.0 -> power 0.965 | observed t -14.86 pass
+  P4 B: se 1.00e-4 dof 17.2 t_crit -2.16 | expected t -11.37 -> power 1.000 | planned z 4.0 -> power 0.965 | observed t -14.90 pass
+  P7 A: se 0.91e-4 dof 21.9 t_crit -2.12 | expected t -9.83 -> power 1.000 | planned z 4.0 -> power 0.965 | observed t -9.47 pass
+  P7 B: se 0.71e-4 dof 19.1 t_crit -2.14 | expected t -12.58 -> power 1.000 | planned z 4.0 -> power 0.965 | observed t -13.40 pass
+  P5 A: se 0.60e-4 dof 21.8 t_crit -2.12 | expected t -3.63 -> power 0.927 | planned z 3.5 -> power 0.909 | observed t -5.55 pass
+  P5 B: se 0.62e-4 dof 21.6 t_crit -2.12 | expected t -3.51 -> power 0.911 | planned z 3.5 -> power 0.909 | observed t -2.37 pass
+  P6 A: se 0.54e-4 dof 21.9 t_crit -2.12 | expected t -3.23 -> power 0.859 | planned z 3.5 -> power 0.909 | observed t -1.83 FAIL
+  P6 B: se 0.58e-4 dof 20.3 t_crit -2.13 | expected t -3.00 -> power 0.803 | planned z 3.5 -> power 0.909 | observed t -4.24 pass
+P(all 14 pass | theory exact): realised 0.581, planned 0.515; expected number of failures (realised) 0.50
+  P6 follow-up (24 chains) A: se 0.46e-4 dof 41 power 0.958
+  P6 follow-up (24 chains) B: se 0.39e-4 dof 45 power 0.992

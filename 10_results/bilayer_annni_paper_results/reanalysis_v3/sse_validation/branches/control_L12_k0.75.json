@@ -1,0 +1,43 @@
+{
+  "args": {
+    "results_dir": "10_results/bilayer_annni_paper_results",
+    "part": "control",
+    "L": 12,
+    "T": 0.15,
+    "kappa": 0.75,
+    "rperps": "0,1",
+    "rperp": 0.0,
+    "control_code": 3,
+    "control_g": 0.05,
+    "codes": "3,5,1",
+    "g_top": 5.0,
+    "chains": 6,
+    "therm": null,
+    "meas": null,
+    "threads": 6
+  },
+  "numba": "0.60.0",
+  "control_rperp0": {
+    "E_mean": -1.7504032291666671,
+    "E_min": -1.7510915625000005,
+    "E_max": -1.749777395833333,
+    "E_classical": {
+      "uniform": -1.25,
+      "<2>": -1.75,
+      "<3>": -1.5833333333333333
+    },
+    "excess_vs_E0": 0.00022260416666708416
+  },
+  "control_rperp1": {
+    "E_mean": -2.2506323090277784,
+    "E_min": -2.2515995833333333,
+    "E_max": -2.250125625,
+    "E_classical": {
+      "uniform": -1.75,
+      "<2>": -2.25,
+      "<3>": -2.083333333333333
+    },
+    "excess_vs_E0": -0.00012562499999990706
+  },
+  "wall_s": 41.115127086639404
+}

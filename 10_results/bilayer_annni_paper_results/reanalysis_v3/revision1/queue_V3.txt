@@ -1,0 +1,6 @@
+V3: <23>, <2> on 40x40 at kappa=0.53, r=1 (reference P3)
+  edge lo (<23> below <2>) 40x40: 1.1049(11) | S5a 1.1037(29), diff +0.0012 (+0.4 sigma) | O(g^6) 1.1051 (-0.1 sigma) | O(g^8) 1.1046 (+0.2 sigma)
+  Delta F A at g_c 40x40 -4.03(0.27)e-4 (t -15.2) | 20x20 -4.31(0.66) | O(g^6) -3.97
+  F <23> 40x40 - 20x20: offset at g_c -2.06(6.17)e-5 (t -0.33), Hotelling p 0.82, max|z| 0.49 (p_corr 0.99)
+  F <23> 40x40 - 20x30: offset at g_c +10.87(3.36)e-5 (t +3.24), Hotelling p 0.02, max|z| 3.87 (p_corr 0.00)
+  F <2> 40x40 - 20x20: offset at g_c -4.86(3.62)e-5 (t -1.34), Hotelling p 0.39, max|z| 2.18 (p_corr 0.15)

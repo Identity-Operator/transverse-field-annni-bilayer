@@ -1,0 +1,2 @@
+2x3 bilayer, kappa=0, r=1: N=12; rich: max|f_TI - F_ED| = 3.03e-04 (typ. se 2.4e-04), max|z| = 1.24, mean z = +0.32; trap: max|dF| = 3.49e-04, max|z| = 1.22; m_x vs ED max|z| = 2.44
+2x6 layer, kappa=0.3, r=0: N=12; rich: max|f_TI - F_ED| = 2.17e-03 (typ. se 6.1e-04), max|z| = 2.92, mean z = +1.93; trap: max|dF| = 2.11e-03, max|z| = 2.83; m_x vs ED max|z| = 2.25

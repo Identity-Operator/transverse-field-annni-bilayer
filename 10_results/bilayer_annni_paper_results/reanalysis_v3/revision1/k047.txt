@@ -1,0 +1,3 @@
+kappa = 0.47: O(g^4) series e_PT(g0 = 1/20) of <3> and FM against the measured g0 energies (L = 12)
+  r=0: e_PT <3> = -1.490501 (-679642598551823/455982632601600), FM = -1.530409; ascending:<2>par -1.47021(70e-5); ascending:<3>par -1.48980(45e-5) pull +1.55; ascending:FM -1.53014(34e-5) pull +0.79; descending:random -1.49111(32e-5) pull -1.93
+  r=1: e_PT <3> = -1.990348 (-68646119729430525827/34489507411307520000), FM = -2.030308; ascending:<2>par -1.97075(103e-5); ascending:<3>par -1.99010(56e-5) pull +0.44; ascending:FM -2.03013(39e-5) pull +0.47; descending:random -1.99023(44e-5) pull +0.26

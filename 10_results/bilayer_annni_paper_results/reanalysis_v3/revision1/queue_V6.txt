@@ -1,0 +1,5 @@
+V6: <23>, <3> on 20x30 with 4x sweeps per field at kappa=0.53, r=1 vs P3 (1x)
+  edge hi (<3> below <23>) 4x: 1.1550(29) | S5a 1.1604(27), diff -0.0054 (-1.4 sigma) | O(g^6) 1.1525 (+0.9 sigma) | O(g^8) 1.1536 (+0.5 sigma)
+  Delta F B at g_c 4x -4.23(0.37)e-4 (t -11.4) | 1x -4.90(0.34) -> +1.3 sigma | O(g^6) -3.97
+  F <23> 4x - 1x: offset at g_c +8.96(3.38)e-5 (t +2.65), Hotelling p 0.11, max|z| 2.94 (p_corr 0.02); mean m_x(4x) - m_x(1x) over the grid -1.88e-05
+  F <3> 4x - 1x: offset at g_c +2.26(3.72)e-5 (t +0.61), Hotelling p 0.70, max|z| 1.46 (p_corr 0.54); mean m_x(4x) - m_x(1x) over the grid -4.87e-07

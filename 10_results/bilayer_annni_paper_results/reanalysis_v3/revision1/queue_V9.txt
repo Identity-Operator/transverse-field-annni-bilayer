@@ -1,0 +1,23 @@
+V9: 2x2 lattice x sweeps at kappa=0.52, r=1, g_c=0.9351; Delta F_3 = F<23> - F<3> (e-4); O(g^8) Delta F_3 -1.78, upper edge O(g^8) 0.9515 (O(g^6) 0.9512)
+  cell 20x30 1x (36 ch): Delta F_3 -2.76(0.32) (t -8.6, dof 70); excess over O8 -0.98 (-3.1 sigma) | upper edge 0.9606(29) vs O8 +3.1 sigma
+  cell 20x30 4x (12 ch): Delta F_3 -1.91(0.25) (t -7.6, dof 21); excess over O8 -0.14 (-0.5 sigma) | upper edge 0.9526(23) vs O8 +0.5 sigma
+  cell 20x60 1x (24 ch): Delta F_3 -1.64(0.30) (t -5.4, dof 43); excess over O8 +0.14 (+0.5 sigma) | upper edge 0.9502(28) vs O8 -0.5 sigma
+  cell 20x60 4x (12 ch): Delta F_3 -1.87(0.22) (t -8.7, dof 22); excess over O8 -0.10 (-0.4 sigma) | upper edge 0.9524(20) vs O8 +0.5 sigma
+  effects on Delta F_3 (e-4):
+    lattice_main (60-30, avg over sweeps)      +0.58(0.28)  +2.1 sigma
+    sweeps_main (4x-1x, avg over lattices)     +0.30(0.28)  +1.1 sigma
+    interaction ((60-30)@4x - (60-30)@1x)      -1.07(0.55)  -1.9 sigma
+    lattice @1x                                +1.11(0.44)  +2.5 sigma
+    lattice @4x                                +0.04(0.33)  +0.1 sigma
+    sweeps @20x30                              +0.84(0.41)  +2.1 sigma
+    sweeps @20x60                              -0.23(0.37)  -0.6 sigma
+  per-structure F offsets at g_c (e-5), single-field t and Hotelling p:
+    <23> lattice @1x      +5.09(2.88) t +1.77  Hotelling p 0.18
+    <23> lattice @4x      -1.87(2.52) t -0.74  Hotelling p 0.37
+    <23> sweeps @20x30    +3.41(2.96) t +1.15  Hotelling p 0.25
+    <23> sweeps @20x60    -3.55(2.42) t -1.46  Hotelling p 0.15
+    <3>  lattice @1x      -6.04(3.31) t -1.83  Hotelling p 0.35
+    <3>  lattice @4x      -2.27(2.18) t -1.04  Hotelling p 0.84
+    <3>  sweeps @20x30    -5.00(2.79) t -1.79  Hotelling p 0.59
+    <3>  sweeps @20x60    -1.23(2.81) t -0.44  Hotelling p 0.83
+  combined lattice shift: P3 (all chains) +0.75(0.43), P6 (2x2 main effect) +0.58(0.28) -> +0.63(0.23)e-4 = +2.7 sigma

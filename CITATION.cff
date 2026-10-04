@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper (preferred-citation)."
+type: software
+title: "Code and results for: Onset of a quantum Fisher-Selke sequence in the transverse-field ANNNI model and its bilayer"
+version: 1.0.0
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/Identity-Operator/transverse-field-annni-bilayer"
+keywords:
+  - ANNNI model
+  - transverse-field Ising model
+  - order by disorder
+  - perturbation theory
+  - quantum Monte Carlo
+authors:
+  - family-names: Truong
+    given-names: Tuan-Vu
+    orcid: "https://orcid.org/0009-0005-6357-6060"
+    affiliation: "College of Natural Sciences, Can Tho University"
+  - family-names: Nguyen
+    given-names: Vu-Quoc-Minh
+    orcid: "https://orcid.org/0009-0007-2748-5107"
+    affiliation: "University of Science, Vietnam National University Ho Chi Minh City (VNU-HCM)"
+  - family-names: Nguyen
+    given-names: Hoang-Long
+    orcid: "https://orcid.org/0009-0005-7922-9266"
+    affiliation: "Identity Quantum Computing JSC"
+  - family-names: Nguyen
+    given-names: Thanh-Tien
+    orcid: "https://orcid.org/0000-0002-6678-3787"
+    affiliation: "College of Natural Sciences, Can Tho University"
+    email: nttien@ctu.edu.vn
+preferred-citation:
+  type: article
+  title: "Onset of a quantum Fisher-Selke sequence in the transverse-field ANNNI model and its bilayer"
+  year: 2026
+  authors:
+    - family-names: Truong
+      given-names: Tuan-Vu
+    - family-names: Nguyen
+      given-names: Vu-Quoc-Minh
+    - family-names: Nguyen
+      given-names: Hoang-Long
+    - family-names: Nguyen
+      given-names: Thanh-Tien

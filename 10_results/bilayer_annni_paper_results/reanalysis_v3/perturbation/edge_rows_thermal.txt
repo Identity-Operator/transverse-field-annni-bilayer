@@ -1,0 +1,9 @@
+r=0 kappa=0.52 g_c=0.5997: T=0.15 dF2 -0.28e-4, dF3 +0.18e-4; T=0.10 dF2 -0.01e-4, dF3 +0.01e-4
+r=0 kappa=0.53 g_c=0.7179: T=0.15 dF2 -1.04e-4, dF3 +0.69e-4; T=0.10 dF2 -0.08e-4, dF3 +0.06e-4
+r=0 kappa=0.545 g_c=0.8525: T=0.15 dF2 -4.28e-4, dF3 +2.85e-4; T=0.10 dF2 -0.85e-4, dF3 +0.57e-4
+r=0 kappa=0.5625 g_c=0.9733: T=0.15 dF2 -10.99e-4, dF3 +7.33e-4; T=0.10 dF2 -4.52e-4, dF3 +3.02e-4
+chain check g=0.6: ED kink 0.800, exact 0.800
+chain check g=0.7179: ED kink 0.565, exact 0.564
+r=1 kappa=0.52 g_c=0.9351: ladder kink energy 2.308 (L=8), 2.308 (L=9); exp(-D/T) at T=0.15 = 2.1e-07
+r=1 kappa=0.53 g_c=1.1222: ladder kink energy 1.827 (L=8), 1.827 (L=9); exp(-D/T) at T=0.15 = 5.1e-06
+r=1 kappa=0.545 g_c=1.3369: ladder kink energy 1.274 (L=8), 1.272 (L=9); exp(-D/T) at T=0.15 = 2.1e-04

@@ -1,0 +1,34 @@
+V2rep: <2>, <23>, <3> on 20x60, kappa=0.52, r=1, g_c=0.9351 (S5a reference P6: 20x20 / 20x30)
+  edge lo (<23> below <2>): 0.9269(20) | S5a 0.9297(30), diff -0.0028 (-0.8 sigma) | O(g^6) 0.9254 (+0.8 sigma) | O(g^8) 0.9253 (+0.8 sigma)
+  edge hi (<3> below <23>): 0.9527(38) | S5a 0.9577(52), diff -0.0050 (-0.8 sigma) | O(g^6) 0.9512 (+0.4 sigma) | O(g^8) 0.9515 (+0.3 sigma)
+  edge 32 (<3> below <2>): 0.9366(14) | S5a 0.9381(21), diff -0.0015 (-0.6 sigma) | O(g^6) 0.9351 (+1.0 sigma)
+  Delta F A (<23> - <2>) at g_c: -1.48(0.35)e-4, t -4.2 (dof 22) | S5a -0.99(0.54) -> diff -0.7 sigma | O(g^6) -1.75 -> +0.8 sigma | O(g^8) -1.78 -> +0.8 sigma
+      excess over O(g^8): common lattice +0.30(0.35)e-4 vs S5a +0.78(0.54)e-4
+  Delta F B (<23> - <3>) at g_c: -1.90(0.41)e-4, t -4.6 (dof 21) | S5a -2.47(0.58) -> diff +0.8 sigma | O(g^6) -1.75 -> -0.4 sigma | O(g^8) -1.78 -> -0.3 sigma
+      excess over O(g^8): common lattice -0.12(0.41)e-4 vs S5a -0.69(0.58)e-4
+  reference fu1 only (20x20/20x30): Delta F A -2.13(0.46), B -2.90(0.39) e-4
+  reference pooled 36 (20x20/20x30): Delta F A -1.75(0.36), B -2.76(0.32) e-4
+  F <2> 20x60 - 20x20 [orig, 12 ch]: offset at g_c +3.17(4.45)e-5 (t +0.71), Hotelling p 0.87, max|z| 1.51 (p_corr 0.41), n_eff 1.4
+  F <23> 20x60 - 20x20 [orig, 12 ch]: offset at g_c -1.67(4.72)e-5 (t -0.35), Hotelling p 0.66, max|z| 1.67 (p_corr 0.36), n_eff 1.4
+  F <23> 20x60 - 20x30 [orig, 12 ch]: offset at g_c +4.54(4.30)e-5 (t +1.06), Hotelling p 0.40, max|z| 2.16 (p_corr 0.13), n_eff 1.3
+  F <3> 20x60 - 20x30 [orig, 12 ch]: offset at g_c -1.17(5.71)e-5 (t -0.21), Hotelling p 0.64, max|z| 1.18 (p_corr 0.60), n_eff 1.3
+  F <2> 20x60 - 20x20 [fu1, 24 ch]: offset at g_c -4.30(3.62)e-5 (t -1.19), Hotelling p 0.55, max|z| 2.11 (p_corr 0.14), n_eff 1.3
+  F <23> 20x60 - 20x20 [fu1, 24 ch]: offset at g_c +2.22(4.53)e-5 (t +0.49), Hotelling p 0.59, max|z| 1.05 (p_corr 0.77), n_eff 1.4
+  F <23> 20x60 - 20x30 [fu1, 24 ch]: offset at g_c +6.07(3.86)e-5 (t +1.57), Hotelling p 0.09, max|z| 1.63 (p_corr 0.37), n_eff 1.4
+  F <3> 20x60 - 20x30 [fu1, 24 ch]: offset at g_c -3.89(4.15)e-5 (t -0.94), Hotelling p 0.80, max|z| 1.67 (p_corr 0.31), n_eff 1.3
+  fu1 Delta F A at g_c (recomputed): -2.13(0.46)e-4
+  fu1 Delta F B at g_c (recomputed): -2.90(0.39)e-4
+  energy route (|g - g_c| <= 0.1, e-5): <2> e-f +2.23(3.52), <23> e-f -8.37(3.72), <3> e-f -0.57(7.09); d(e-f)_A -10.61(5.12) [artefact would give -2.7], d(e-f)_B -7.81(8.00) [artefact would give +1.5]
+  replicate check against V2 (same lattice, independent seeds):
+    F <2> V2rep - V2: -1.03(3.22)e-5 (t -0.32), Hotelling p 0.48
+    F <23> V2rep - V2: +0.93(3.74)e-5 (t +0.25), Hotelling p 0.70
+    F <3> V2rep - V2: +6.12(4.73)e-5 (t +1.29), Hotelling p 0.58
+    pooled V2+V2rep (24 ch) edge lo: 0.9264(13) | O(g^6) 0.9254 (+0.7 sigma) | O(g^8) 0.9253 (+0.8 sigma)
+    pooled V2+V2rep (24 ch) edge hi: 0.9502(28) | O(g^6) 0.9512 (-0.4 sigma) | O(g^8) 0.9515 (-0.5 sigma)
+    pooled V2+V2rep Delta F A at g_c: -1.58(0.24)e-4 (t -6.5, dof 45) | O(g^8) -1.78 -> excess +0.20(0.24), +0.8 sigma
+    pooled V2+V2rep Delta F B at g_c: -1.64(0.30)e-4 (t -5.4, dof 43) | O(g^8) -1.78 -> excess +0.14(0.30), +0.5 sigma
+  all-chains per-lattice Delta F_B shift, 20x60 minus 20x30 (e-4), and per-structure pooled offsets (e-5):
+    P3: 20x60 (24 ch) -3.82(0.34) vs 20x30 (24 ch) -4.57(0.26) -> shift +0.75(0.43) = +1.7 sigma | per structure: <23> +3.84(3.20) t +1.20, <3> -3.68(2.89) t -1.27
+    P6: 20x60 (24 ch) -1.64(0.30) vs 20x30 (36 ch) -2.76(0.32) -> shift +1.11(0.44) = +2.5 sigma | per structure: <23> +5.09(2.88) t +1.77, <3> -6.04(3.31) t -1.83
+    combined P3 + P6: +0.93(0.31)e-4 = +3.0 sigma
+  chains: [('<2>', 12), ('<23>', 12), ('<3>', 12)]; cuts {'<2>': [], '<23>': [], '<3>': []}; g0 pulls {<2>: -0.13, <23>: +0.04, <3>: +0.55}

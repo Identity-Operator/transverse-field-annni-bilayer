@@ -1,0 +1,246 @@
+% =====================================================================================================
+% DRAFT for paper1.tex (not yet in the manuscript): new Sec. III subsection "Fourth and sixth order"
+% and an addendum to Appendix A. REVTeX 4.2 / PRB style; uses the paper's macros and labels
+% (eq:e0, eq:h, eq:e2, eq:F, eq:wedge, tab:h, app:pt). New labels: sec:pt46, eq:series, eq:eps4,
+% eq:expand, eq:W, eq:w23, eq:width23, eq:width6, tab:eps, eq:ab.
+%
+% Every number carries a "% src:" comment. Sources (vu_work/10_results/bilayer_annni_paper_results/
+% reanalysis_v3/perturbation/):
+%   A4 = pt_order4_analysis.json   H4 = pt_order4_hull.json   V4 = pt_order4_verify.json
+%   A6 = pt_order6_analysis.json   V6 = pt_order6_verify.json
+%   T  = audit scratch pt_table.json, E6 = audit scratch pt6_edges.json. Both are produced by
+%        pt_table.py and pt6_edges.py, which call only the repo functions per_column, coeffs,
+%        per_spin_series and derivs_at_half. Before submission, fold them into pt_order6_v3.py --analyze
+%        (or copy them to audit_9b/) so that T and E6 also live in the repo outputs.
+%
+% Suggested edits elsewhere (not made here):
+%   * Sec. III.B, last paragraph: replace the \pending{Decide whether to carry the expansion to order g^4 ...}
+%     and "higher orders decide whether mixed structures such as <2^k3> appear there" by a pointer to
+%     Sec. \ref{sec:pt46}.
+%   * Sec. III.B: the <3> wedge boundaries could quote the g^4 terms of Eq. (eq:w23) and of kappa_{FM|3}.
+%   * Intro/abstract/conclusion: add the <23> result only after the S5a QMC analysis (plan step 5).
+%   * refs: the \pending on Fisher-Selke/Fisher-Szpilka below needs a verified statement and bib entries
+%     (Fisher & Szpilka, PRB 36, 644 and 5343 (1987) are verified per the project notes, but not yet in refs.bib).
+% =====================================================================================================
+
+\subsection{Fourth and sixth order}
+\label{sec:pt46}
+
+At $\kappa_{3|2}$ every sequence of two- and three-site domains has the same energy at order $g^2$, so
+higher orders decide which structures are stable there. We carry the expansion to order $g^6$. Moving a
+wall takes a whole row of flips, so structures with different walls mix only at order $g^{L_x}$
+($g^{2L_x}$ for $r>0$). For $L_x\to\infty$ each straight-wall structure is therefore a nondegenerate
+reference state, and Rayleigh--Schr\"odinger theory applies to each one separately. We write its energy
+per spin as
+\begin{equation}
+e=e_0+\varepsilon_2g^2+\varepsilon_4g^4+\varepsilon_6g^6+O(g^8),
+\label{eq:series}
+\end{equation}
+where $\varepsilon_2g^2$ is the term $e_2$ of Eq.~\eqref{eq:e2}. Odd orders vanish because every flipped
+spin must be flipped back. Write the Ising part of Eq.~\eqref{eq:H} as
+$-\sum J_{ij}\hat\sigma^z_i\hat\sigma^z_j$, so that $J_{ij}=-\kappa$ for the pairs at distance 2 along $y$.
+Let $D_i=2h_i$ be the cost of flipping spin $i$, and let $B_{ij}=J_{ij}s_is_j$, which is minus the energy of
+the bond between spins $i$ and $j$. Then
+\begin{equation}
+N\varepsilon_4=\sum_i\frac{1}{D_i^3}
+-\sum_{\langle ij\rangle}\frac{4B_{ij}\,(D_i+D_j)}{(D_iD_j)^2\,(D_i+D_j-4B_{ij})} .
+\label{eq:eps4}
+\end{equation}
+The first term is the $g^4$ term of an isolated spin, whose energy is $-(h^2+g^2)^{1/2}$. The second sum
+runs over coupled pairs only. For an uncoupled pair, the fourth-order processes that flip both spins cancel
+exactly against the normalization term of the expansion. This cancellation generalizes. Each spin
+that takes part in a process is flipped and restored, so the $g^{2n}$ coefficient receives contributions
+only from connected clusters of at most $n$ spins. We obtain $\varepsilon_6$ from this linked-cluster form,
+solving every connected cluster of up to three spins exactly in rational arithmetic.
+%
+Equation~\eqref{eq:eps4} agrees with exact diagonalization of small clusters to $3\times10^{-6}$ relative.
+% src: V4 closed_vs_ED, max |E4_ED/E4 - 1| = 2.7e-6
+The sixth-order coefficient agrees with exact diagonalization to $10^{-4}$ relative,
+% src: V6 vs_ED, max |rel| = 1.1e-4 (limited by the ED fit)
+and with an independent evaluation that does not use the cluster decomposition to $10^{-15}$.
+% src: audit scratch cmp_e6.py (13 structures), copied to perturbation/audit_9b/
+Table~\ref{tab:eps} lists the coefficients at $\kappa=1/2$.
+
+\begin{table}
+\caption{Coefficients of Eq.~\eqref{eq:series} per spin at $\kappa=1/2$, in units of $J_0$, for the
+structures that compete near $\kappa_{3|2}$; $\rho$ is the wall density. $W_4=k\varepsilon_2'+\varepsilon_4$
+with $k=F(3)/4$ [Eq.~\eqref{eq:W}] is the fourth-order energy on the $\langle3\rangle|\langle2\rangle$ line
+(not needed for FM). $\varepsilon_2$ and $\varepsilon_4$ are exact; $W_4$ and $\varepsilon_6$ are rounded.}
+\label{tab:eps}
+\begin{ruledtabular}
+\begin{tabular}{llcccc}
+$r$ & & $\rho$ & $\varepsilon_4$ & $10^3\,W_4$ & $10^5\,\varepsilon_6$ \\
+\hline
+0 & FM                    & 0   & $-5/1512$            & ---      & $-24.15$ \\
+  & $\langle3\rangle$     & 1/3 & $-1/125$             & $-7.333$ & $-7.454$ \\
+  & $\langle23\rangle$    & 2/5 & $-54673/7560000$     & $-4.610$ & $-120.5$ \\
+  & $\langle2\rangle$     & 1/2 & $-13/4320$           & $2.546$  & $-22.06$ \\
+1 & FM                    & 0   & $-1/1152$            & ---      & $-2.062$ \\
+  & $\langle3\rangle$     & 1/3 & $-437/362880$        & $-1.011$ & $4.409$  \\
+  & $\langle23\rangle$    & 2/5 & $-4477/3628800$      & $-0.5972$ & $-2.175$ \\
+  & $\langle2\rangle$     & 1/2 & $-11/13440$          & $0.4836$ & $-2.055$ \\
+\end{tabular}
+\end{ruledtabular}
+% src: T (all entries). FM/<2>/<3> eps4 also A4 exact_at_kappa_half; W4 of <3>, <23>, <2> also A4 hull_3_2.hull
+% (exact: -11/1500, -34849/7560000, 11/4320 at r=0; -367/362880, -2167/3628800, 13/26880 at r=1).
+% eps2 is not tabulated: it follows from Table I and Eq. (e2), e.g. -1/5, -14/75, -1/6 for <3>, <23>, <2> at r=0.
+\end{table}
+
+\paragraph*{Expansion about the multiphase point.}
+Write $\kappa=\tfrac12+kg^2+k_1g^4+k_2g^6$. The classical energy~\eqref{eq:e0} is linear in $\kappa$ with
+slope $1-4\rho$, so Eq.~\eqref{eq:series} becomes
+\begin{align}
+e={}&e_0\big|_{\kappa=1/2}+g^2\big[k(1-4\rho)+\varepsilon_2\big]\nonumber\\
+&+g^4\big[k_1(1-4\rho)+W_4\big]\nonumber\\
+&+g^6\big[k_2(1-4\rho)+W_6\big]+O(g^8),
+\label{eq:expand}
+\end{align}
+with the $\kappa$ derivatives (primes) taken at $\kappa=1/2$:
+\begin{equation}
+W_4=k\varepsilon_2'+\varepsilon_4,\qquad
+W_6=k_1\varepsilon_2'+\tfrac12k^2\varepsilon_2''+k\varepsilon_4'+\varepsilon_6 .
+\label{eq:W}
+\end{equation}
+On the second-order boundary, $k=F(3)/4$, the $g^2$ bracket is the same for every sequence of two- and
+three-site domains (Appendix~\ref{app:pt}). Each domain of $n\ge4$ sites adds $\tfrac12g^2[(n-2)F(3)-F(n)]>0$
+to the numerator of Eq.~\eqref{eq:de}.
+% src check: gives the minimum penalties 7/1320 (r=0) and 1/440 (r=1) of H4 min_g2_penalty_long_domains
+At order $g^4$ only the sequences of 2s and 3s therefore compete, with energy
+$k_1(1-4\rho)+W_4$ per spin. Since the first term is linear in $\rho$, the stable structures are the vertices
+of the lower convex hull of $W_4$ plotted against $\rho$.
+
+\paragraph*{Fourth order: the $\langle23\rangle$ phase.}
+At $\kappa=1/2$ the field~\eqref{eq:h} of a spin depends only on its position in its own domain
+(Table~\ref{tab:h}). The pairs in Eq.~\eqref{eq:eps4} lie either within one domain or on the two sides of a
+single wall. $W_4$ is therefore a sum of terms for single domains and for pairs of adjacent domains
+[Eq.~\eqref{eq:ab}]. A periodic sequence can be read as a closed path through the domain lengths, and its
+energy per spin is the cost of the path divided by its length. Such a ratio is smallest on an elementary
+cycle, so only $\langle2\rangle$, $\langle3\rangle$ and $\langle23\rangle$ ($\up\up\dn\dn\dn$) can be stable at this
+order, among sequences of any length (Appendix~\ref{app:pt}). Table~\ref{tab:eps} places $\langle23\rangle$
+below the chord from $\langle3\rangle$ to $\langle2\rangle$, by $619/504000$ per spin at $r=0$ and $667/3628800$
+at $r=1$.
+% src: H4 by_r.{0,1}.chord_depth_23 = -619/504000, -667/3628800
+$\langle23\rangle$ is therefore stable in a window
+\begin{equation}
+\tfrac12+\tfrac14F(3)g^2+k_1^-g^4<\kappa<\tfrac12+\tfrac14F(3)g^2+k_1^+g^4,
+\label{eq:w23}
+\end{equation}
+with $k_1^-=20591/2016000\approx0.0102$ and $k_1^+=6011/336000\approx0.0179$ at $r=0$, and
+$k_1^-=167/107520\approx0.00155$ and $k_1^+=1961/725760\approx0.00270$ at $r=1$.
+% src: H4 by_r.{0,1}.window_k1 (also A6 boundaries.*.k1)
+The width is
+\begin{align}
+\Delta\kappa_{23}&=\tfrac{619}{80640}\,g^4\approx0.00768\,g^4 &&(r=0),\nonumber\\
+&=\tfrac{667}{580608}\,g^4\approx0.00115\,g^4 &&(r=1).
+\label{eq:width23}
+\end{align}
+% src: H4 by_r.{0,1}.window_width_g4; ratio H4 width_ratio_r0_r1 = 6.68
+The bilayer window is 6.7 times narrower. This is a much stronger effect of the interlayer coupling than the
+factor 2.4 for the $\langle3\rangle$ wedge. The window keeps shrinking with $r$: its width is $0.00274\,g^4$ at
+$r=1/2$ and $0.00028\,g^4$ at $r=2$.
+% src: H4 by_r.{1/2,2}.window_width_g4_float
+The metastable branches $\langle3\rangle$ and $\langle2\rangle$ cross inside the window, at
+$\kappa=\tfrac12+\tfrac14F(3)g^2+k_1^{32}g^4$ with $k_1^{32}=1067/72000$ ($r=0$) and $31/13824$ ($r=1$). This
+is the line along which template free energies of $\langle3\rangle$ and $\langle2\rangle$ can be compared with
+simulations.
+% src: A4 boundaries.{r=0,r=1}.kappa_32
+On the ferromagnetic side the boundary moves to
+$\kappa_{\rm FM|3}=\tfrac12-\tfrac18F(3)g^2+k_1^{\rm F}g^4$, with $k_1^{\rm F}=-59/10080$ ($r=0$) and
+$-1573/1935360$ ($r=1$).
+% src: A4 boundaries.{r=0,r=1}.kappa_FM3
+No new structure appears there. At $\kappa_{\rm FM|3}$ every structure other than the ferromagnet and
+$\langle3\rangle$ contains two-site domains or domains of four or more sites. Each of these costs energy at
+order $g^2$, which higher orders cannot overturn at small $g$.
+
+\paragraph*{Degenerate edges.}
+The argument also shows exactly which structures tie on the window edges. In the $(\rho,W_4)$ plane, a
+sequence with no two adjacent three-site domains ($\langle223\rangle$, $\langle2223\rangle$,
+$\langle22323\rangle,\dots$) lies exactly on the segment joining $\langle2\rangle$ and $\langle23\rangle$. A
+sequence with no two adjacent two-site domains ($\langle233\rangle$, $\langle2333\rangle,\dots$) lies exactly on
+the segment joining $\langle23\rangle$ and $\langle3\rangle$ (Appendix~\ref{app:pt}).
+% src: H4 by_r.*.named_heights (all exactly 0)
+Each edge of the window is therefore itself a multiphase line at order $g^4$, and the next order decides it.
+
+\paragraph*{Sixth order.}
+A connected cluster of three spins spans at most one intermediate domain. $W_6$ is therefore a sum of terms
+for three consecutive domains, which we have confirmed in exact arithmetic.
+% src: audit scratch e6_triples.py / e6_triples8.out (copied to audit_9b/): zero residual, 71 sequences, r=0,1
+Applied to pairs of consecutive domains, the elementary-cycle argument allows at most one new structure in
+each gap at this order: $\langle223\rangle$ between $\langle23\rangle$ and $\langle2\rangle$, or
+$\langle233\rangle$ between $\langle3\rangle$ and $\langle23\rangle$. $\langle223\rangle$ opens, in a window of
+width $4.1\times10^{-4}g^6$ at $r=0$ and $2.3\times10^{-5}g^6$ at $r=1$.
+% src: A6 boundaries.*.23|2.hull_at_g6 = [23, 223, 2]; widths E6 width_223_g6 = 4.146e-4, 2.301e-5
+% (depths of <223> below the <23>-<2> chord: A6 -3.384e-5, -1.878e-6)
+$\langle233\rangle$ does not open. It lies above the segment from $\langle3\rangle$ to $\langle23\rangle$ by
+$2.0\times10^{-6}g^6$ per spin at $r=0$ ($1.2\times10^{-7}g^6$ at $r=1$), a margin small enough that the next
+order could reverse it.
+% src: A6 boundaries.*.3|23.hull_at_g6 = [3, 23]; heights E6 height_233_vs_chord_3_23 = +1.97e-6, +1.24e-7
+Through order $g^6$ the transverse field thus orders the structures as $\langle3\rangle$, $\langle23\rangle$,
+$\langle223\rangle$, $\langle2\rangle$ with increasing $\kappa$. We do not follow the sequence further.
+The same order of appearance occurs in the low-temperature expansion of the classical three-dimensional
+model~\cite{fisher1980infinitely,selke1988annni}. There $\langle3\rangle$ appears at first order with a
+first-order boundary to the ferromagnet. $\langle23\rangle$ springs from the multiphase point at second
+order, with a first-order $\langle3\rangle|\langle23\rangle$ boundary. The phases $\langle2^k3\rangle$
+follow on the $\langle2\rangle$ side at successively higher orders. In the language of domain-wall
+interactions~\cite{fisher1987domainI,fisher1987domainII}, $g^2$ takes over the role of the low-temperature
+expansion parameter. The selecting excitations are virtual rather than thermal spin flips next to the walls,
+and the coefficients are different. The quantum result does not follow from the classical one: at $T=0$ the
+model maps onto a strongly anisotropic three-dimensional classical model~\cite{suzuki1976relationship}, which is
+not in the regime of the classical low-temperature expansion.
+% src: read in Selke, Phys. Rep. 170, 213 (1988), Sec. 4.2 (2026-09-29). fisher1987domainI/II = Fisher & Szpilka,
+% PRB 36, 644 and 5343 (1987), verified via Crossref; bib entries still to be added to refs.bib.
+
+The sixth order also shifts the edges of the $\langle23\rangle$ window. With
+$k_2^-=-3.06\times10^{-3}$ and $k_2^+=+5.26\times10^{-3}$ at $r=0$, and $-1.43\times10^{-4}$ and
+$+2.42\times10^{-4}$ at $r=1$ (the upper edge is now the $\langle23\rangle|\langle223\rangle$ boundary),
+% src: E6 k2_3|23, k2_23|223
+\begin{align}
+\Delta\kappa_{23}&=0.00768\,g^4\,(1+1.08\,g^2) &&(r=0),\nonumber\\
+&=0.00115\,g^4\,(1+0.34\,g^2) &&(r=1).
+\label{eq:width6}
+\end{align}
+% src: E6 width_23_rel_g6_over_g4 = 1.085, 0.335
+The correction is 27\% of the leading term at $g=0.5$ for $r=0$, and it equals the leading term near $g=1$.
+Equation~\eqref{eq:width23} is therefore quantitative only at small $g$. Where the window becomes wide enough
+to resolve numerically, the sixth-order terms are needed, and at $r=0$ the series converges slowly there.
+
+% =====================================================================================================
+% Addendum to Appendix A ("Minimum of the domain-sequence energy"), to follow its last paragraph.
+% =====================================================================================================
+
+\paragraph*{Higher orders.}
+At order $g^4$ on the line $k=F(3)/4$ the same ratio structure appears, with the domain costs replaced by
+costs of adjacent domain pairs. Let $P(D,D',B)=-4B(D+D')/[(DD')^2(D+D'-4B)]$ be the pair term of
+Eq.~\eqref{eq:eps4}. Let $D_1,\dots,D_n$ be the flip costs along a domain (Table~\ref{tab:h}), and let
+$\gamma_i=s_i(s_{i+2}+s_{i-2})$, which takes the values $-2$, $0$ and $2$. Let $X_n$ and $Y_n$ be the flip costs of
+the first and second site from a wall of a domain of length $n$. Then, for a period of $L$ sites,
+\begin{align}
+W_4L&=\sum_k\big[a(n_k)+b(n_k,n_{k+1})\big],\nonumber\\
+a(n)&=\sum_{i=1}^{n}\Big[-\frac{2k\gamma_i}{D_i^2}+\frac1{D_i^3}\Big]\nonumber\\
+&\quad+\sum_{i=1}^{n}\Big[P(D_i,D_i,1)+\tfrac12P(D_i,D_i,r)\Big]\nonumber\\
+&\quad+\sum_{i=1}^{n-1}P(D_i,D_{i+1},1)+\sum_{i=1}^{n-2}P(D_i,D_{i+2},-\tfrac12),\nonumber\\
+b(n,n')&=P(X_n,X_{n'},-1)+P(Y_n,X_{n'},\tfrac12)\nonumber\\
+&\quad+P(X_n,Y_{n'},\tfrac12).
+\label{eq:ab}
+\end{align}
+% src: audit scratch domain_form.py (copied to audit_9b/): reproduces W4 exactly for 1167 sequences, r = 0, 1
+With $C(n,n')=k_1(n-4)+a(n)+b(n,n')$, the fourth-order energy per spin is $\sum_kC(n_k,n_{k+1})/\sum_kn_k$.
+A periodic sequence is a closed walk on the directed graph with vertices $\{2,3\}$ and all four edges, where
+edge $n\to n'$ has cost $C(n,n')$ and length $n$. Every closed walk splits into elementary cycles. A ratio of
+sums with positive denominators is at least the smallest ratio of its parts, with equality only if all parts
+share that ratio. The elementary cycles are $2\to2$, $3\to3$ and $2\to3\to2$, that is $\langle2\rangle$,
+$\langle3\rangle$ and $\langle23\rangle$, so one of them minimizes the energy for every $k_1$.
+
+Now count the adjacent pairs $N_{22}$, $N_{33}$ and $N_{23}=N_{32}$ of a cyclic sequence. The period is
+$L=2N_{22}+3N_{33}+5N_{23}$, and the total cost is $N_{22}C(2,2)+N_{33}C(3,3)+N_{23}[C(2,3)+C(3,2)]$. The point
+$(\rho,W_4)$ of the sequence is therefore the average of the points of $\langle2\rangle$, $\langle3\rangle$ and
+$\langle23\rangle$, weighted by the site fractions $2N_{22}/L$, $3N_{33}/L$ and $5N_{23}/L$. Sequences with
+$N_{33}=0$ lie on the segment from $\langle2\rangle$ to $\langle23\rangle$, and sequences with $N_{22}=0$ lie on
+the segment from $\langle23\rangle$ to $\langle3\rangle$. All other sequences lie strictly above the hull,
+because $\langle23\rangle$ lies strictly below the chord from $\langle3\rangle$ to $\langle2\rangle$.
+
+At order $g^6$ the terms of Eq.~\eqref{eq:W} involve at most three consecutive domains. The same argument,
+applied to the graph whose vertices are pairs of consecutive domains, leaves $\langle2\rangle$,
+$\langle23\rangle$ and $\langle223\rangle$ as the only candidates on the $\langle23\rangle|\langle2\rangle$
+line, and $\langle3\rangle$, $\langle23\rangle$ and $\langle233\rangle$ on the $\langle3\rangle|\langle23\rangle$
+line.

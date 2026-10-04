@@ -1,0 +1,209 @@
+\documentclass[aps,prb,twocolumn,superscriptaddress,floatfix]{revtex4-2}
+\usepackage{amsmath,amssymb}
+\newcommand{\rp}{r_\perp}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thesection}{S\arabic{section}}
+\begin{document}
+\title{Supplemental Material for ``Onset of a quantum Fisher--Selke sequence in the transverse-field ANNNI model and its
+bilayer''}
+\maketitle
+
+\section{Exact-diagonalization benchmark}
+
+Table~\ref{tab:ed} compares the SSE code with exact diagonalization at finite temperature on four 12-spin periodic
+clusters built by the production lattice code (Sec.~IV~C of the main text). The benchmark anneals every case over 16 fields from $g=3$ to the target,
+with 2000 sweeps per field, followed by 5000 thermalization and 40\,000 measurement sweeps at the
+target, in 24 independent chains.
+
+\begin{table*}
+\caption{SSE against exact diagonalization on 12-spin periodic clusters. $e$ is the energy per spin
+and $m_x$ the transverse magnetization, both in units of $J_0$; the SSE values are means of 24
+chains with standard errors in parentheses. The last column is the largest $|z|$ over all
+observables of the case (31--39 per case).}
+\label{tab:ed}
+\begin{ruledtabular}
+\begin{tabular}{llcrrrrlllll}
+Cluster & & $T/J_0$ & $J_y/J_0$ & $\kappa$ & $\rp$ & $g$ & $e$ (ED) & $e$ (SSE) & $m_x$ (ED) & $m_x$ (SSE) & max$|z|$ \\
+\hline
+$2\times3$ bilayer & & 0.15 & 1 & 0 & 1 & 1.0 & $-2.60042$ & $-2.60075(20)$ & 0.20169 & 0.20176(14) & 1.65 \\
+$2\times3$ bilayer & & 0.15 & 1 & 0.75 & $-1$ & 0.5 & $-1.78588$ & $-1.78603(17)$ & 0.14416 & 0.14394(23) & 2.01 \\
+$2\times3$ bilayer & & 0.50 & 1 & 0.5 & 1 & 2.0 & $-2.52091$ & $-2.52076(68)$ & 0.54569 & 0.54629(57) & 2.62 \\
+$2\times6$ layer & & 0.15 & 1 & 0 & 0 & 2.0 & $-2.52595$ & $-2.52599(23)$ & 0.56144 & 0.56135(18) & 0.68 \\
+$2\times6$ layer & & 0.15 & 1 & 0.75 & 0 & 1.0 & $-1.83990$ & $-1.84065(41)$ & 0.46098 & 0.46162(69) & 1.83 \\
+$2\times6$ layer & & 0.15 & 1 & 0.5625 & 0 & 1.5 & $-2.07157$ & $-2.07171(41)$ & 0.64328 & 0.64283(47) & 1.86 \\
+$2\times6$ layer & & 0.15 & $-1$ & 0.25 & 0 & 1.0 & $-1.89600$ & $-1.89616(20)$ & 0.29902 & 0.29881(20) & 1.82 \\
+$2\times6$ layer & & 0.50 & 1 & 1.0 & 0 & 0.5 & $-1.71530$ & $-1.71590(69)$ & 0.18847 & 0.18876(157) & 2.00 \\
+$1\times6$ ladder & & 0.15 & 1 & 0.75 & 1 & 1.0 & $-1.46156$ & $-1.46128(36)$ & 0.61156 & 0.61140(57) & 1.80 \\
+$1\times6$ ladder & & 0.15 & 1 & 1.3 & $-1$ & 0.3 & $-1.30261$ & $-1.30361(86)$ & 0.22459 & 0.22781(527) & 2.50 \\
+$1\times6$ ladder & & 0.15 & 1 & 0.5 & 1 & 3.0 & $-3.13579$ & $-3.13617(44)$ & 0.95525 & 0.95528(12) & 1.68 \\
+$3\times4$ layer & & 0.15 & 1 & 0.375 & 0 & 2.5 & $-2.74079$ & $-2.74034(26)$ & 0.88540 & 0.88520(14) & 1.68 \\
+$3\times4$ layer & & 0.15 & 1 & 1.0 & 0 & 1.0 & $-2.12664$ & $-2.12642(20)$ & 0.25671 & 0.25629(20) & 2.08 \\
+\end{tabular}
+\end{ruledtabular}
+\end{table*}
+
+\section{Pre-registered test of the $\langle23\rangle$ phase}
+
+The test of Sec.~V~B of the main text followed a written plan. Its design, analysis and pass criteria were fixed before
+the production runs, after an independent review of the design.
+
+\paragraph*{Design.} Seven points $(\kappa,r)$ with $\lambda\le0.5$, chosen so that the predicted margin
+of $\langle23\rangle$ at $g_c$ exceeds the expected statistical error. At each point the pairs
+$\{\langle23\rangle,\langle2\rangle\}$ ran on a $20\times20$ bilayer and $\{\langle23\rangle,\langle3\rangle\}$ on
+a $20\times30$ bilayer, with 12 chains per structure, $2000+3000$ sweeps per field at $T=0.15\,J_0$, and
+the ascending template protocol of Sec.~IV~B of the main text. The field grid had steps of $0.1$ below the
+predicted window, steps of $0.02$ (or $0.01$) across it with a margin of at least $0.06$, and $g_c$ as an
+exact grid point. Competitors ($\langle223\rangle$, $\langle233\rangle$, $\langle2333\rangle$) ran at four of
+the points, and one point was repeated at $T=0.10\,J_0$.
+
+\paragraph*{Analysis.} Free energies as in Sec.~IV~B of the main text. Uncertainties from the jackknife
+over chains; differences tested with Welch's $t$ and its Satterthwaite degrees of freedom; crossings
+from a cubic-spline root of the free-energy difference, with linear interpolation in $g^2$ as a cross
+check.
+
+\paragraph*{Criteria.}
+(T1)~Existence at each point: $F_{\langle23\rangle}<F_{\langle2\rangle}$ and $F_{\langle23\rangle}<F_{\langle3\rangle}$
+at $g_c$, each with one-sided $p<0.0228$, and no chain cut before $g_c$. The headline required a pass at
+all seven points, and a failure at $\lambda\le0.4$ was to be reported and investigated.
+(T2)~Window edges compared with the exact-$\kappa$ $O(g^4)$ and $O(g^6)$ values (not pass/fail).
+(T3, T4)~Width of the window and the ratio of widths for $r=0$ and $1$.
+(T5)~Competitors at $g_c$ against their $O(g^6)$ values, with a stop rule: no claim for
+$\langle23\rangle$ if a competitor lay below it at $g_c$ by more than $3\sigma$.
+(T6)~Consistency of $\langle23\rangle$ on the two lattices ($\max|z|<3$) and of $\langle3\rangle$ with the
+$24\times24$ branches.
+(T7)~Window edges at $T=0.10$ and $0.15$ agree within $2\sigma$.
+(T8)~An exploratory search for further structures above the window.
+
+Table~\ref{tab:prereg} lists the outcomes. The stop rule of T5 was never triggered. At $\kappa=0.53$, $r=1$, T6
+passed its criterion, but with $\chi^2=3.45$ per point and 14 of 25 fields beyond $2\sigma$; the original $20\times30$ run
+for $\langle23\rangle$ at this point is the one that the repeat with four times the sweeps did not reproduce
+(Sec.~V~B of the main text).
+
+\begin{table}
+\caption{Outcomes of the pre-registered criteria. T2: pulls of the lower and upper edges against $O(g^6)$. T5: largest
+$|{\rm pull}|$ of a competitor against $O(g^6)$. T6: $\max|z|$ of $\langle23\rangle$ on $20\times20$ against
+$20\times30$, with $\chi^2$ per point. T7: pulls of the edges at $T=0.10\,J_0$ against $T=0.15\,J_0$. T8: fields at which
+$\langle233\rangle$ lies $2\sigma$ below $\langle23\rangle$ and $\langle3\rangle$. T3 and T4 are in
+Table~VI of the main text and Fig.~5(c) of the main text.}
+\label{tab:prereg}
+\footnotesize
+\begin{ruledtabular}
+\begin{tabular}{llllllll}
+$\kappa$ & $r$ & T1 & T2 & T5 & T6 & T7 & T8 \\
+\hline
+0.52   & 0 & pass & $-1.8$, $-1.1$  & ---   & 1.15 (0.57) & --- & --- \\
+0.53   & 0 & pass & $+0.1$, $+2.7$  & 1.4   & 1.35 (0.59) & $-0.1$, $-1.7$ & none \\
+0.545  & 0 & pass & $-0.7$, $+5.1$  & 1.2   & 1.85 (0.55) & --- & none \\
+0.5625 & 0 & pass & $-0.9$, $+11.4$ & 3.3   & 1.04 (0.34) & --- & 1.10--1.30 \\
+0.52   & 1 & fail & $+1.4$, $+1.2$  & ---   & 1.38 (1.14) & --- & --- \\
+0.53   & 1 & pass & $-0.5$, $+2.9$  & 1.5   & 2.19 (3.45) & --- & none \\
+0.545  & 1 & pass & $+0.4$, $+1.4$  & ---   & 1.15 (0.34) & --- & --- \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\paragraph*{Changes.} Before the runs, the review moved $\langle3\rangle$ from a $12\times12$ to the
+$20\times30$ lattice, added $g_c$ to the grids, specified the quadrature, and replaced a test on
+$\min(F_{\langle2\rangle},F_{\langle3\rangle})$ by the two separate comparisons of T1. After the first
+output existed, eight ambiguities in the analysis were resolved in writing without changing the text of
+the plan, and an error that affected only chains cut at a change of structure was corrected. It had no
+effect on any chain used in T1. The follow-up at $\kappa=0.52$, $r=1$ was decided after the result of
+T1 at that point was known, and is reported separately.
+
+\section{Additional runs and error budget}
+
+\subsection{Common lattice, replicates and sweeps}
+\label{sec:s3runs}
+
+After the pre-registered test (Sec.~V~B of the main text) we ran the following checks; Table~\ref{tab:lattices}
+collects the results. For decoupled layers the common lattice at $\kappa=0.53$ places the upper edge $1.7\sigma$ above
+the eighth-order value and $2.9\sigma$ above the sixth. In the bilayer the pre-registered upper edges lie above the
+series, and the paired differences of $e_b-f_b$ between $\langle23\rangle$ and $\langle3\rangle$ are consistent with
+zero, so the integration does not cause this excess.
+
+To locate the bilayer excess we followed all three structures on one $20\times60$ lattice at both bilayer points, twice
+with independent seeds, and repeated $\langle23\rangle$ and $\langle3\rangle$ with four times the sweeps on both lattices
+at $\kappa=0.52$ (Table~\ref{tab:lattices}). For decoupled layers the common lattice agrees with the pre-registered
+values and with the eighth-order series at both $\kappa$; at $\kappa=0.52$ it also turns the narrowest pre-registered
+margin, $\langle23\rangle$ below $\langle3\rangle$, into a clear one. In the bilayer the two $20\times60$ runs agree with
+each other, and together they place both edges and both gains within $2\sigma$ of the eighth-order series. The gain over
+$\langle2\rangle$ is the same on every lattice. The gain over $\langle3\rangle$ is about $10^{-4}$ per spin larger on
+$20\times30$ at the standard sweeps, in every set run with these settings: the original runs, the follow-up at
+$\kappa=0.52$ and the repeat at $T=0.10\,J_0$. With four times the sweeps it falls to the $20\times60$ value at both
+points, while on $20\times60$ it does not change. At $\kappa=0.52$ the four combinations of lattice and sweeps thus
+place the shift in the one combination of $20\times30$ and standard sweeps (interaction $1.9\sigma$, simple effects
+$2.1$--$2.5\sigma$), and we think these runs were not fully equilibrated. The original $20\times30$ run for
+$\langle23\rangle$ at $\kappa=0.53$ had also been flagged by the consistency check T6 (Appendix~C of the main text). The
+energies shift with the free energies, so the integration is not the cause, and the pair correlations along $y$ show no
+wall defects. Runs repeated with identical settings and new seeds agree within their statistical errors (rms $t=1.06$
+over ten comparisons). We therefore take the $20\times60$ and four-times-sweeps values as our estimates. They agree with
+the eighth-order series within $1\sigma$ in the gain over $\langle3\rangle$ and the upper edge at both points; in the
+bilayer the sixth and eighth orders differ by less than these errors. The pre-registered $\Delta F_3$ in the bilayer
+carries a bias of about $-10^{-4}$ per spin, which raises the upper edge by about $0.008$ in $g$. $\langle23\rangle$ lies
+below both neighbors in every run and on every lattice at all seven points. At $\kappa=0.52$, $r=1$ its margin over
+$\langle3\rangle$ is $1.6$--$1.9\times10^{-4}$ per spin in the three unbiased sets, five to nine standard errors, and
+its margin over $\langle2\rangle$ on the common lattice is $1.6\times10^{-4}$, $6.5$ standard errors.
+
+At $T=0.10\,J_0$, where the thermal contributions estimated below are about ten times smaller, $\langle23\rangle$
+remains below both neighbors at $\kappa=0.53$ for both $r$ (Table~\ref{tab:lattices}). For $r=0$ the lower edge and the
+gain over $\langle2\rangle$ are unchanged, and the upper edge and the gain over $\langle3\rangle$ move by $1.7\sigma$ and
+$1.5\sigma$; for $r=1$ both edges and both gains agree with those at $T=0.15\,J_0$ within $1\sigma$.
+
+\begin{table}
+\caption{Test points on different lattices and in different runs: window edges and the free-energy
+differences $\Delta F_2$ and $\Delta F_3$ of $\langle23\rangle$ relative to $\langle2\rangle$ and $\langle3\rangle$ at $g_c$
+(in $10^{-4}J_0$ per spin, negative where $\langle23\rangle$ is lower), with statistical errors. The
+pre-registered runs use $20\times20$ for $\langle2\rangle$ and $20\times30$ for $\langle3\rangle$; the follow-up at
+$\kappa=0.52$ was decided afterwards; ``$4\times$'' has four times the sweeps; $20\times60$ holds all three
+structures, ``replicate'' repeats that run with new seeds, and ``pooled'' combines the chains of both; ``$T=0.10$'' repeats the
+pre-registered runs at $T=0.10\,J_0$; $40\times40$ holds $\langle2\rangle$ and $\langle23\rangle$ only.}
+\label{tab:lattices}
+\footnotesize\setlength{\tabcolsep}{1.2pt}
+\begin{ruledtabular}
+\begin{tabular}{llllll}
+$\kappa$, $r$ & run & $g_{2|23}$ & $g_{23|3}$ & $\Delta F_2$ & $\Delta F_3$ \\
+\hline
+0.52, 0 & pre-registered & 0.5885(21) & 0.6084(36) & $-3.32(60)$ & $-1.46(62)$ \\
+     & $20\times60$ & 0.5917(13) & 0.6130(28) & $-2.34(38)$ & $-2.26(47)$ \\
+     & $O(g^8)$ & 0.5922 & 0.6134 & $-2.21$ & $-2.32$ \\
+0.53, 0 & pre-registered & 0.7050(19) & 0.7553(51) & $-4.93(76)$ & $-7.19(99)$ \\
+     & $20\times60$ & 0.7038(11) & 0.7522(37) & $-5.41(42)$ & $-6.84(72)$ \\
+     & $T=0.10$ & 0.7048(17) & 0.7451(33) & $-5.12(65)$ & $-5.36(66)$ \\
+     & $O(g^8)$ & 0.7045 & 0.7460 & $-5.16$ & $-5.63$ \\
+0.53, 1 & pre-registered & 1.1037(29) & 1.1604(27) & $-4.31(66)$ & $-4.90(34)$ \\
+     & $20\times30$, $4\times$ & --- & 1.1550(29) & --- & $-4.23(37)$ \\
+     & $20\times60$ & 1.1033(19) & 1.1483(39) & $-4.38(45)$ & $-3.38(51)$ \\
+     & replicate & 1.1017(18) & 1.1552(32) & $-4.75(40)$ & $-4.25(43)$ \\
+     & pooled & 1.1025(13) & 1.1517(26) & $-4.56(30)$ & $-3.82(34)$ \\
+     & $40\times40$ & 1.1049(11) & --- & $-4.03(27)$ & --- \\
+     & $T=0.10$ & 1.1069(17) & 1.1612(37) & $-3.56(39)$ & $-5.06(49)$ \\
+     & $O(g^8)$ & 1.1046 & 1.1536 & $-4.08$ & $-4.09$ \\
+0.52, 1 & pre-registered & 0.9297(30) & 0.9577(52) & $-0.99(54)$ & $-2.47(58)$ \\
+     & follow-up & 0.9232(25) & 0.9620(36) & $-2.13(46)$ & $-2.90(39)$ \\
+     & $20\times60$ & 0.9258(19) & 0.9477(40) & $-1.67(34)$ & $-1.38(44)$ \\
+     & replicate & 0.9269(20) & 0.9527(38) & $-1.48(35)$ & $-1.90(41)$ \\
+     & pooled & 0.9264(13) & 0.9502(28) & $-1.58(24)$ & $-1.64(30)$ \\
+     & $20\times30$, $4\times$ & --- & 0.9526(23) & --- & $-1.91(25)$ \\
+     & $20\times60$, $4\times$ & --- & 0.9524(20) & --- & $-1.87(22)$ \\
+     & $O(g^8)$ & 0.9253 & 0.9515 & $-1.78$ & $-1.78$ \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\subsection{Error budget}
+
+The error budget of the free-energy differences at the test points has five parts. The statistical errors are
+$0.3$--$1.2\times10^{-4}$ per spin (Table~VI of the main text). The choice of quadrature (trapezoidal, Richardson or spline)
+moves them by up to $0.4\times10^{-4}$. The truncation of the series, estimated by the last retained term, the
+difference between the eighth- and sixth-order values of Tables~VI and VII of the main text, is at most
+$0.5\times10^{-4}$ in the bilayer and $0.7\times10^{-4}$ for $r=0$ at $\kappa\le0.53$, but $2.6\times10^{-4}$ and
+$7.6\times10^{-4}$ for $\Delta F_3$ at $\kappa=0.545$ and $0.5625$, $r=0$. Thermal excitations of the rows next to the
+walls contribute at $T=0.15\,J_0$. For $r=0$ a free-chain estimate, which neglects the pinning of these rows by the walls
+and therefore bounds the effect from above, gives up to $0.3\times10^{-4}$ at $\kappa=0.52$, $1.0\times10^{-4}$ at
+$\kappa=0.53$ and several $10^{-4}$ at $\kappa\ge0.545$; it favors $\langle23\rangle$ over $\langle2\rangle$ and
+$\langle3\rangle$ over $\langle23\rangle$, the opposite of the upper-edge excess. For $r=1$ the rows form ladders whose kink
+energy at the test fields exceeds $1.2J_0$, and the estimate is below $10^{-5}$. Finally, the pre-registered $20\times30$ runs in the bilayer carry the
+bias of about $-10^{-4}$ in $\Delta F_3$ discussed in Sec.~\ref{sec:s3runs}. For $r=0$ at $\kappa\ge0.545$ the comparison of $\Delta F_3$ and of the upper
+edge with the series is therefore qualitative.
+
+\end{document}

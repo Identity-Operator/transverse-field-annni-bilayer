@@ -1,0 +1,12 @@
+case       k r    g_c  lam | T1 z(23-2) z(23-3) [exp] pass |                lo edge (O4,O6) |                hi edge (O4,O6) | T3 x1e3 qmc-slope / th-slope [pred O6] | cuts<=g_c
+P6_fu1_only_POSTHOC   0.52 1 0.9351 0.31 |   -4.6   -7.5 [None] PASS | 0.9232(25) (0.9255,0.9254) | 0.9620(36) (0.9468,0.9512) | - / 2.37(0.27) [1.58] | {'23a': 0, '2': 0, '23b': 0, '3': 0}
+
+T1 detail (rich; trap; unanch): Delta x1e4 (se), Welch dof, pred O(g^6)
+P6_fu1_only_POSTHOC rich: -2.13(0.46) dof 41 @g=0.9351, -2.90(0.39) dof 45 @g=0.9351  trap: -2.06(0.44) dof 43 @g=0.9351, -2.90(0.35) dof 46 @g=0.9351  unanch: -6.30(2.22) dof 46 @g=0.9351, -3.96(1.88) dof 44 @g=0.9351   pred -1.75
+
+edge cross-checks [rich/cubic, rich/u, trap/cubic, unanch/cubic]; sign changes if > 1
+P6_fu1_only_POSTHOC lo         0.9232 / 0.9232 / 0.9236 / 0.8997   z vs O6 -0.9
+P6_fu1_only_POSTHOC hi         0.9620 / 0.9620 / 0.9620 / 0.9716   z vs O6 +3.0
+P6_fu1_only_POSTHOC 32         0.9364 / 0.9364 / 0.9362 / 0.9335   z vs O6 +1.0
+P6_fu1_only_POSTHOC T6 <23>@20x20 vs <23>@20x30: n=28 chi2/pt 0.68 max|z| 1.12 (#>2: 0) max|dF| 4.3e-05
+P6_fu1_only_POSTHOC z(E_meas(g0) - e_PT(g0)): {'2': 0.96, '3': 0.45, '23a': -1.81, '23b': -0.35}

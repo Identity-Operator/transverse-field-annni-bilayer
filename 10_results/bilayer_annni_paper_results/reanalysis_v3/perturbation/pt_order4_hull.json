@@ -1,0 +1,277 @@
+{
+ "args": {
+  "max_domains": 14,
+  "max_long": 7
+ },
+ "by_r": {
+  "0": {
+   "r": "0",
+   "F": "1/5",
+   "n_sequences": 5801,
+   "n_degenerate_at_g2": 2538,
+   "min_g2_penalty_long_domains": "7/1320",
+   "all_long_penalised_positive": true,
+   "hull": [
+    "3",
+    "23",
+    "2"
+   ],
+   "window_k1": [
+    "20591/2016000",
+    "6011/336000"
+   ],
+   "window_width_g4": "619/80640",
+   "window_width_g4_float": 0.0076760912698412695,
+   "chord_depth_23": "-619/504000",
+   "named_heights": {
+    "<3>": {
+     "rho": "1/3",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<23>": {
+     "rho": "2/5",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<2>": {
+     "rho": "1/2",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<233>": {
+     "rho": "3/8",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<223>": {
+     "rho": "3/7",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<2333>": {
+     "rho": "4/11",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<2223>": {
+     "rho": "4/9",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<23233>": {
+     "rho": "5/13",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<22323>": {
+     "rho": "5/12",
+     "height": "0",
+     "height_float": 0.0
+    }
+   }
+  },
+  "1/2": {
+   "r": "1/2",
+   "F": "48/385",
+   "n_sequences": 5801,
+   "n_degenerate_at_g2": 2538,
+   "min_g2_penalty_long_domains": "128/38115",
+   "all_long_penalised_positive": true,
+   "hull": [
+    "3",
+    "23",
+    "2"
+   ],
+   "window_k1": [
+    "12175943/4108797000",
+    "1952719/342399750"
+   ],
+   "window_width_g4": "204667/74705400",
+   "window_width_g4_float": 0.002739654696983083,
+   "chord_depth_23": "-204667/466908750",
+   "named_heights": {
+    "<3>": {
+     "rho": "1/3",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<23>": {
+     "rho": "2/5",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<2>": {
+     "rho": "1/2",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<233>": {
+     "rho": "3/8",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<223>": {
+     "rho": "3/7",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<2333>": {
+     "rho": "4/11",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<2223>": {
+     "rho": "4/9",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<23233>": {
+     "rho": "5/13",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<22323>": {
+     "rho": "5/12",
+     "height": "0",
+     "height_float": 0.0
+    }
+   }
+  },
+  "1": {
+   "r": "1",
+   "F": "1/12",
+   "n_sequences": 5801,
+   "n_degenerate_at_g2": 2538,
+   "min_g2_penalty_long_domains": "1/440",
+   "all_long_penalised_positive": true,
+   "hull": [
+    "3",
+    "23",
+    "2"
+   ],
+   "window_k1": [
+    "167/107520",
+    "1961/725760"
+   ],
+   "window_width_g4": "667/580608",
+   "window_width_g4_float": 0.0011487957451499118,
+   "chord_depth_23": "-667/3628800",
+   "named_heights": {
+    "<3>": {
+     "rho": "1/3",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<23>": {
+     "rho": "2/5",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<2>": {
+     "rho": "1/2",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<233>": {
+     "rho": "3/8",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<223>": {
+     "rho": "3/7",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<2333>": {
+     "rho": "4/11",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<2223>": {
+     "rho": "4/9",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<23233>": {
+     "rho": "5/13",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<22323>": {
+     "rho": "5/12",
+     "height": "0",
+     "height_float": 0.0
+    }
+   }
+  },
+  "2": {
+   "r": "2",
+   "F": "3/70",
+   "n_sequences": 5801,
+   "n_degenerate_at_g2": 2538,
+   "min_g2_penalty_long_domains": "1/840",
+   "all_long_penalised_positive": true,
+   "hull": [
+    "3",
+    "23",
+    "2"
+   ],
+   "window_k1": [
+    "2519129/2897664000",
+    "4987051/4346496000"
+   ],
+   "window_width_g4": "69049/248371200",
+   "window_width_g4_float": 0.0002780072729849516,
+   "chord_depth_23": "-69049/1552320000",
+   "named_heights": {
+    "<3>": {
+     "rho": "1/3",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<23>": {
+     "rho": "2/5",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<2>": {
+     "rho": "1/2",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<233>": {
+     "rho": "3/8",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<223>": {
+     "rho": "3/7",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<2333>": {
+     "rho": "4/11",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<2223>": {
+     "rho": "4/9",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<23233>": {
+     "rho": "5/13",
+     "height": "0",
+     "height_float": 0.0
+    },
+    "<22323>": {
+     "rho": "5/12",
+     "height": "0",
+     "height_float": 0.0
+    }
+   }
+  }
+ },
+ "width_ratio_r0_r1": 6.681859070464768
+}

@@ -1,0 +1,22 @@
+V2: <2>, <23>, <3> on 20x60, kappa=0.52, r=1, g_c=0.9351 (S5a reference P6: 20x20 / 20x30)
+  edge lo (<23> below <2>): 0.9258(19) | S5a 0.9297(30), diff -0.0039 (-1.1 sigma) | O(g^6) 0.9254 (+0.2 sigma) | O(g^8) 0.9253 (+0.3 sigma)
+  edge hi (<3> below <23>): 0.9477(40) | S5a 0.9577(52), diff -0.0100 (-1.5 sigma) | O(g^6) 0.9512 (-0.9 sigma) | O(g^8) 0.9515 (-1.0 sigma)
+  edge 32 (<3> below <2>): 0.9341(14) | S5a 0.9381(21), diff -0.0040 (-1.6 sigma) | O(g^6) 0.9351 (-0.7 sigma)
+  Delta F A (<23> - <2>) at g_c: -1.67(0.34)e-4, t -4.9 (dof 20) | S5a -0.99(0.54) -> diff -1.1 sigma | O(g^6) -1.75 -> +0.2 sigma | O(g^8) -1.78 -> +0.3 sigma
+      excess over O(g^8): common lattice +0.10(0.34)e-4 vs S5a +0.78(0.54)e-4
+  Delta F B (<23> - <3>) at g_c: -1.38(0.44)e-4, t -3.2 (dof 21) | S5a -2.47(0.58) -> diff +1.5 sigma | O(g^6) -1.75 -> +0.8 sigma | O(g^8) -1.78 -> +0.9 sigma
+      excess over O(g^8): common lattice +0.40(0.44)e-4 vs S5a -0.69(0.58)e-4
+  reference fu1 only (20x20/20x30): Delta F A -2.13(0.46), B -2.90(0.39) e-4
+  reference pooled 36 (20x20/20x30): Delta F A -1.75(0.36), B -2.76(0.32) e-4
+  F <2> 20x60 - 20x20 [orig, 12 ch]: offset at g_c +4.20(4.22)e-5 (t +0.99), Hotelling p 0.35, max|z| 1.04 (p_corr 0.73), n_eff 1.4
+  F <23> 20x60 - 20x20 [orig, 12 ch]: offset at g_c -2.61(4.84)e-5 (t -0.54), Hotelling p 0.42, max|z| 0.97 (p_corr 0.81), n_eff 1.3
+  F <23> 20x60 - 20x30 [orig, 12 ch]: offset at g_c +3.61(4.43)e-5 (t +0.82), Hotelling p 0.14, max|z| 2.30 (p_corr 0.09), n_eff 1.3
+  F <3> 20x60 - 20x30 [orig, 12 ch]: offset at g_c -7.29(5.80)e-5 (t -1.26), Hotelling p 0.73, max|z| 1.34 (p_corr 0.51), n_eff 1.3
+  F <2> 20x60 - 20x20 [fu1, 24 ch]: offset at g_c -3.27(3.33)e-5 (t -0.98), Hotelling p 0.86, max|z| 2.41 (p_corr 0.07), n_eff 1.3
+  F <23> 20x60 - 20x20 [fu1, 24 ch]: offset at g_c +1.28(4.65)e-5 (t +0.28), Hotelling p 0.50, max|z| 1.46 (p_corr 0.46), n_eff 1.3
+  F <23> 20x60 - 20x30 [fu1, 24 ch]: offset at g_c +5.14(3.99)e-5 (t +1.29), Hotelling p 0.55, max|z| 1.95 (p_corr 0.20), n_eff 1.4
+  F <3> 20x60 - 20x30 [fu1, 24 ch]: offset at g_c -10.00(4.26)e-5 (t -2.35), Hotelling p 0.26, max|z| 2.67 (p_corr 0.04), n_eff 1.4
+  fu1 Delta F A at g_c (recomputed): -2.13(0.46)e-4
+  fu1 Delta F B at g_c (recomputed): -2.90(0.39)e-4
+  energy route (|g - g_c| <= 0.1, e-5): <2> e-f -8.54(4.01), <23> e-f -4.89(5.63), <3> e-f +1.13(5.96); d(e-f)_A +3.65(6.91) [artefact would give -0.8], d(e-f)_B -6.02(8.20) [artefact would give -3.7]
+  chains: [('<2>', 12), ('<23>', 12), ('<3>', 12)]; cuts {'<2>': [], '<23>': [], '<3>': []}; g0 pulls {<2>: -0.35, <23>: -2.07, <3>: -0.42}

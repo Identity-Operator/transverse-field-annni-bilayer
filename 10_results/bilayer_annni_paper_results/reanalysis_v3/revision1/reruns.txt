@@ -1,0 +1,48 @@
+(a) production vs fine-grid rerun with Welch-Satterthwaite dof (variance components: 2 branches x 2 runs)
+  0.49_0   prod 0.5952 fine 0.6062 z -2.20 dof_WS 6.3 p 0.068 -> Gaussian-equivalent z 1.83
+  0.51_0   prod 0.4378 fine 0.4290 z +1.98 dof_WS 15.8 p 0.066 -> Gaussian-equivalent z 1.84
+  0.53_1   prod 1.1258 fine 1.1200 z +0.94 dof_WS 15.5 p 0.364 -> Gaussian-equivalent z 0.91
+  0.625_0  prod 1.3253 fine 1.3215 z +1.42 dof_WS 17.5 p 0.173 -> Gaussian-equivalent z 1.36
+  0.75_0   prod 1.8597 fine 1.8603 z -0.15 dof_WS 14.6 p 0.883 -> Gaussian-equivalent z 0.15
+  chi2 naive 11.66 (5 dof, p 0.040); with WS dof -> Gaussian-equivalent chi2 9.42, p 0.093
+
+(b) combining the five reruns: inverse-variance (as in the draft) vs equal weights vs pooled chains vs production only
+  0.49_0   prod 0.5952(48) fine 0.6062(13) | inv-var 0.6054(13) equal 0.6007(25) pooled(12 chains, common grid) 0.6026(34)
+  0.51_0   prod 0.4378(37) fine 0.4290(25) | inv-var 0.4318(21) equal 0.4334(22) pooled(12 chains, common grid) 0.4335(27)
+  0.53_1   prod 1.1258(49) fine 1.1200(36) | inv-var 1.1221(29) equal 1.1229(31) pooled(12 chains, common grid) 1.1241(34)
+  0.625_0  prod 1.3253(15) fine 1.3215(22) | inv-var 1.3241(13) equal 1.3234(14) pooled(12 chains, common grid) 1.3237(20)
+  0.75_0   prod 1.8597(33) fine 1.8603(25) | inv-var 1.8601(20) equal 1.8600(21) pooled(12 chains, common grid) 1.8587(27)
+  slopes [inverse_variance]: r0_FM3 1.0071(42), r0_32 1.0096(69), r1_FM3 0.9964(68), r1_32 1.0047(57) | ratios FM3 2.426, 32 2.412
+  slopes [equal_weight    ]: r0_FM3 1.0158(60), r0_32 1.0059(71), r1_FM3 0.9964(68), r1_32 1.0031(58) | ratios FM3 2.447, 32 2.407
+  slopes [pooled_chains   ]: r0_FM3 1.0124(66), r0_32 1.0055(75), r1_FM3 0.9964(68), r1_32 1.0008(63) | ratios FM3 2.439, 32 2.411
+  slopes [production_only ]: r0_FM3 1.0156(70), r0_32 1.0008(81), r1_FM3 0.9964(68), r1_32 0.9976(78) | ratios FM3 2.446, 32 2.408
+
+(c) Table III crossings: cubic-spline root (draft) vs linear in u = g^2 (rich quadrature, same chains)
+  branches_L12_k0.47_r0.csv                cubic 0.9856(32)  u-linear 0.9857(32)  diff +0.00012 (+0.04 se)
+  branches_L12_k0.47_r1.csv                cubic 1.5484(26)  u-linear 1.5486(25)  diff +0.00027 (+0.10 se)
+  branches_L12_k0.48_r0.csv                cubic 0.8250(38)  u-linear 0.8249(37)  diff -0.00005 (-0.01 se)
+  branches_L12_k0.48_r1.csv                cubic 1.3017(41)  u-linear 1.3017(41)  diff -0.00000 (-0.00 se)
+  branches_L12_k0.49_r0.csv                cubic 0.5952(48)  u-linear 0.5952(48)  diff +0.00003 (+0.01 se)
+  branches_L12_k0.49_r1.csv                cubic 0.9542(57)  u-linear 0.9544(56)  diff +0.00019 (+0.03 se)
+  branches_L12_k0.51_r0.csv                cubic 0.4378(37)  u-linear 0.4375(35)  diff -0.00040 (-0.11 se)
+  branches_L12_k0.51_r1.csv                cubic 0.6794(51)  u-linear 0.6795(49)  diff +0.00008 (+0.02 se)
+  branches_L12_k0.52_r0.csv                cubic 0.6008(32)  u-linear 0.6008(32)  diff -0.00001 (-0.00 se)
+  branches_L12_k0.52_r1.csv                cubic 0.9367(57)  u-linear 0.9365(57)  diff -0.00018 (-0.03 se)
+  branches_L12_k0.53_r0.csv                cubic 0.7190(58)  u-linear 0.7188(56)  diff -0.00024 (-0.04 se)
+  branches_L12_k0.53_r1.csv                cubic 1.1258(49)  u-linear 1.1257(49)  diff -0.00008 (-0.02 se)
+  branches_L12_k0.5625_r0.csv              cubic 0.9832(48)  u-linear 0.9832(48)  diff +0.00002 (+0.00 se)
+  branches_L12_k0.5625_r1.csv              cubic 1.5390(42)  u-linear 1.5392(41)  diff +0.00022 (+0.05 se)
+  branches_L12_k0.625_r0.csv               cubic 1.3253(15)  u-linear 1.3263(15)  diff +0.00098 (+0.65 se)
+  branches_L12_k0.625_r1.csv               cubic 2.0258(23)  u-linear 2.0264(24)  diff +0.00058 (+0.25 se)
+  branches_L12_k0.75_r0.csv                cubic 1.8597(33)  u-linear 1.8621(32)  diff +0.00238 (+0.73 se)
+  branches_L12_k0.75_r1.csv                cubic 2.6923(48)  u-linear 2.6928(45)  diff +0.00053 (+0.11 se)
+  branches_L24_k0.47_r0.csv                cubic 0.9862(18)  u-linear 0.9862(18)  diff +0.00008 (+0.05 se)
+  branches_L24_k0.47_r1.csv                cubic 1.5521(25)  u-linear 1.5522(25)  diff +0.00011 (+0.05 se)
+  branches_L24_k0.53_r0.csv                cubic 0.7201(15)  u-linear 0.7199(15)  diff -0.00018 (-0.12 se)
+  branches_L24_k0.53_r1.csv                cubic 1.1272(25)  u-linear 1.1272(25)  diff -0.00000 (-0.00 se)
+  branches_L24_k0.625_r0.csv               cubic 1.3256(15)  u-linear 1.3266(15)  diff +0.00103 (+0.69 se)
+  fine_L12_k0.49_r0_h0.025.csv             cubic 0.6062(13)  u-linear 0.6062(13)  diff -0.00004 (-0.03 se)
+  fine_L12_k0.51_r0_h0.05.csv              cubic 0.4290(25)  u-linear 0.4291(25)  diff +0.00010 (+0.04 se)
+  fine_L12_k0.53_r1_h0.05.csv              cubic 1.1200(36)  u-linear 1.1200(36)  diff -0.00006 (-0.02 se)
+  fine_L12_k0.625_r0_h0.05.csv             cubic 1.3215(22)  u-linear 1.3217(22)  diff +0.00024 (+0.11 se)
+  fine_L12_k0.75_r0_h0.05.csv              cubic 1.8603(25)  u-linear 1.8608(26)  diff +0.00046 (+0.18 se)

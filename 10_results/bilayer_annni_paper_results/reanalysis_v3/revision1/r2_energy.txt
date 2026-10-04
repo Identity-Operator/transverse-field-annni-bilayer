@@ -1,0 +1,94 @@
+Estimator: E_per_spin = (-<n>/beta + sum_b |J_b| + N g)/N (SSE operator count), paired with f (rich) chain by chain.
+  typical se of the chain-mean E at one g, 12x12       :   65.3e-5 (median over 54 branches)
+  typical se of the chain-mean E at one g, 20x20       :   25.3e-5 (median over 16 branches)
+  typical se of the chain-mean E at one g, 20x20/T0.1  :   21.4e-5 (median over 2 branches)
+  typical se of the chain-mean E at one g, 20x22       :   27.9e-5 (median over 1 branches)
+  typical se of the chain-mean E at one g, 20x28       :   22.6e-5 (median over 3 branches)
+  typical se of the chain-mean E at one g, 20x30       :   21.2e-5 (median over 16 branches)
+  typical se of the chain-mean E at one g, 20x30/T0.1  :   17.1e-5 (median over 2 branches)
+  typical se of the chain-mean E at one g, 20x32       :   22.2e-5 (median over 4 branches)
+  typical se of the chain-mean E at one g, 20x60       :   15.3e-5 (median over 6 branches)
+  typical se of the chain-mean E at one g, 24x24       :   31.1e-5 (median over 15 branches)
+  typical se of the chain-mean E at one g, 40x40       :   13.2e-5 (median over 2 branches)
+
+|pull| > 3 points of e - f (per g, chain-level se): branch, g, pull, g - g* (or g - g_c), g - first cut
+  51 points with |pull| > 3 out of 2363 (expected ~71 for t5, ~6.4 for a normal)
+  branches_L12_k0.47_r0.csv                FM     g=1.000 pull -3.2 | g-g* +0.01 | g-first cut -0.60
+  branches_L12_k0.47_r0.csv                FM     g=1.500 pull -3.2 | g-g* +0.51 | g-first cut -0.10
+  branches_L12_k0.47_r1.csv                <3>    g=0.700 pull +9.0 | g-g* -0.85 | no cut
+  branches_L12_k0.48_r0.csv                FM     g=0.400 pull -3.4 | g-g* -0.42 | g-first cut -1.10
+  branches_L12_k0.48_r0.csv                FM     g=1.500 pull -3.3 | g-g* +0.68 | g-first cut +0.00
+  branches_L12_k0.48_r1.csv                FM     g=2.400 pull -3.8 | g-g* +1.10 | g-first cut +0.00
+  branches_L12_k0.49_r0.csv                <3>    g=1.000 pull -3.1 | g-g* +0.40 | no cut
+  branches_L12_k0.49_r0.csv                <3>    g=1.700 pull -3.4 | g-g* +1.10 | no cut
+  branches_L12_k0.49_r1.csv                <3>    g=0.600 pull -4.8 | g-g* -0.35 | no cut
+  branches_L12_k0.49_r1.csv                <3>    g=2.300 pull -5.0 | g-g* +1.35 | no cut
+  branches_L12_k0.52_r0.csv                <2>    g=1.100 pull +6.8 | g-g* +0.50 | g-first cut -0.50
+  branches_L12_k0.52_r1.csv                <3>    g=0.800 pull -3.8 | g-g* -0.14 | no cut
+  branches_L12_k0.52_r1.csv                <3>    g=2.300 pull -3.4 | g-g* +1.36 | no cut
+  branches_L12_k0.53_r1.csv                <3>    g=0.100 pull -3.3 | g-g* -1.03 | no cut
+  branches_L12_k0.53_r1.csv                <3>    g=0.200 pull +5.0 | g-g* -0.93 | no cut
+  branches_L12_k0.53_r1.csv                <3>    g=1.500 pull -3.2 | g-g* +0.37 | no cut
+  branches_L12_k0.5625_r0.csv              <3>    g=1.300 pull -3.1 | g-g* +0.32 | no cut
+  branches_L12_k0.5625_r1.csv              <3>    g=1.100 pull -3.4 | g-g* -0.44 | no cut
+  branches_L12_k0.625_r0.csv               <3>    g=0.400 pull -3.1 | g-g* -0.93 | no cut
+  branches_L12_k0.625_r1.csv               <2>    g=1.900 pull -3.4 | g-g* -0.13 | g-first cut -0.80
+  branches_L12_k0.625_r1.csv               <3>    g=2.600 pull +4.5 | g-g* +0.57 | no cut
+  branches_L12_k0.75_r0.csv                <2>    g=0.500 pull -3.1 | g-g* -1.36 | g-first cut -1.60
+  branches_L12_k0.75_r0.csv                <3>    g=2.900 pull -4.0 | g-g* +1.04 | no cut
+  branches_L12_k0.75_r1.csv                <2>    g=1.200 pull +5.4 | g-g* -1.49 | no cut
+  branches_L12_k0.75_r1.csv                <2>    g=1.500 pull +3.3 | g-g* -1.19 | no cut
+  branches_L12_k0.75_r1.csv                <2>    g=2.800 pull -3.5 | g-g* +0.11 | no cut
+  branches_L12_k0.75_r1.csv                <3>    g=2.300 pull +5.8 | g-g* -0.39 | no cut
+  branches_L24_k0.47_r1.csv                <3>    g=0.300 pull -3.2 | g-g* -1.25 | no cut
+  branches_L24_k0.625_r0.csv               <3>    g=1.400 pull -3.3 | g-g* +0.07 | no cut
+  seqbr_Lx20_Ly20_k0.52_r0_T0.15_23-2.csv  <23>   g=0.600 pull +3.1 | g-g_c +0.00 | no cut
+  seqbr_Lx20_Ly20_k0.52_r1_T0.15_23-2_fu1. <23>   g=1.010 pull -3.2 | g-g_c +0.07 | no cut
+  seqbr_Lx20_Ly20_k0.53_r0_T0.15_23-2.csv  <23>   g=0.760 pull +3.4 | g-g_c +0.04 | no cut
+  seqbr_Lx20_Ly20_k0.545_r0_T0.15_23-2.csv <23>   g=0.720 pull -4.2 | g-g_c -0.13 | no cut
+  seqbr_Lx20_Ly20_k0.545_r0_T0.15_23-2.csv <23>   g=0.780 pull -3.1 | g-g_c -0.07 | no cut
+  seqbr_Lx20_Ly20_k0.545_r1_T0.15_23-2.csv <23>   g=1.200 pull -3.0 | g-g_c -0.14 | no cut
+  seqbr_Lx20_Ly20_k0.5625_r0_T0.15_23-2.cs <2>    g=1.080 pull -3.3 | g-g_c +0.11 | no cut
+  seqbr_Lx20_Ly22_k0.5625_r0_T0.15_2333.cs <2333> g=0.973 pull -4.7 | g-g_c -0.00 | no cut
+  seqbr_Lx20_Ly22_k0.5625_r0_T0.15_2333.cs <2333> g=1.220 pull -3.1 | g-g_c +0.25 | no cut
+  seqbr_Lx20_Ly22_k0.5625_r0_T0.15_2333.cs <2333> g=1.400 pull -3.7 | g-g_c +0.43 | no cut
+  seqbr_Lx20_Ly28_k0.53_r0_T0.15_223.csv   <223>  g=0.400 pull +3.4 | g-g_c -0.32 | no cut
+  seqbr_Lx20_Ly28_k0.53_r1_T0.15_223.csv   <223>  g=0.700 pull +3.1 | g-g_c -0.42 | no cut
+  seqbr_Lx20_Ly28_k0.5625_r0_T0.15_223.csv <223>  g=1.500 pull -3.9 | g-g_c +0.53 | no cut
+  seqbr_Lx20_Ly30_k0.52_r0_T0.15_23-3.csv  <3>    g=0.100 pull +3.3 | g-g_c -0.50 | no cut
+  seqbr_Lx20_Ly30_k0.52_r1_T0.15_23-3.csv  <3>    g=0.940 pull -3.1 | g-g_c +0.00 | no cut
+  seqbr_Lx20_Ly30_k0.52_r1_T0.15_23-3_fu1. <3>    g=0.800 pull -3.1 | g-g_c -0.14 | no cut
+  seqbr_Lx20_Ly30_k0.545_r0_T0.15_23-3.csv <23>   g=0.100 pull +3.1 | g-g_c -0.75 | no cut
+  seqbr_Lx20_Ly30_k0.545_r0_T0.15_23-3.csv <23>   g=0.780 pull +3.3 | g-g_c -0.07 | no cut
+  seqbr_Lx20_Ly30_k0.5625_r0_T0.15_23-3.cs <23>   g=0.100 pull +3.2 | g-g_c -0.87 | no cut
+  seqbr_Lx20_Ly60_k0.52_r1_T0.15_2-23-3.cs <23>   g=0.400 pull -3.4 | g-g_c -0.54 | no cut
+  seqbr_Lx20_Ly60_k0.52_r1_T0.15_2-23-3.cs <2>    g=0.930 pull -4.2 | g-g_c -0.01 | no cut
+  seqbr_Lx20_Ly60_k0.53_r1_T0.15_2-23-3.cs <3>    g=0.400 pull -3.1 | g-g_c -0.72 | no cut
+  of these, 34 lie at or below g*/g_c + 0.1
+
+Table III crossings with each pair truncated one grid step below the first |pull| > 3 of either branch (vs the q*-cut rule)
+  branches_L12_k0.47_r0.csv            first |pull|>3 at g=1.00 BELOW/AT the crossing 0.9856: cannot truncate
+  branches_L12_k0.47_r1.csv            first |pull|>3 at g=0.70 BELOW/AT the crossing 1.5484: cannot truncate
+  branches_L12_k0.48_r0.csv            first |pull|>3 at g=0.40 BELOW/AT the crossing 0.8250: cannot truncate
+  branches_L12_k0.48_r1.csv            first |pull|>3 at g=2.40 (g* 1.302): full 1.3017(41) truncated at 2.30 1.3017(41) diff -0.00000
+  branches_L12_k0.49_r0.csv            first |pull|>3 at g=1.00 (g* 0.595): full 0.5952(48) truncated at 0.90 0.5952(48) diff -0.00000
+  branches_L12_k0.49_r1.csv            first |pull|>3 at g=0.60 BELOW/AT the crossing 0.9542: cannot truncate
+  branches_L12_k0.51_r0.csv            no |pull| > 3 on either branch: 0.4378(37) unchanged
+  branches_L12_k0.51_r1.csv            no |pull| > 3 on either branch: 0.6794(51) unchanged
+  branches_L12_k0.52_r0.csv            first |pull|>3 at g=1.10 (g* 0.601): full 0.6008(32) truncated at 1.00 0.6008(32) diff +0.00000
+  branches_L12_k0.52_r1.csv            first |pull|>3 at g=0.80 BELOW/AT the crossing 0.9367: cannot truncate
+  branches_L12_k0.53_r0.csv            no |pull| > 3 on either branch: 0.7190(58) unchanged
+  branches_L12_k0.53_r1.csv            first |pull|>3 at g=0.10 BELOW/AT the crossing 1.1258: cannot truncate
+  branches_L12_k0.5625_r0.csv          first |pull|>3 at g=1.30 (g* 0.983): full 0.9832(48) truncated at 1.20 0.9831(49) diff -0.00012
+  branches_L12_k0.5625_r1.csv          first |pull|>3 at g=1.10 BELOW/AT the crossing 1.5390: cannot truncate
+  branches_L12_k0.625_r0.csv           first |pull|>3 at g=0.40 BELOW/AT the crossing 1.3253: cannot truncate
+  branches_L12_k0.625_r1.csv           first |pull|>3 at g=1.90 BELOW/AT the crossing 2.0258: cannot truncate
+  branches_L12_k0.75_r0.csv            first |pull|>3 at g=0.50 BELOW/AT the crossing 1.8597: cannot truncate
+  branches_L12_k0.75_r1.csv            first |pull|>3 at g=1.20 BELOW/AT the crossing 2.6923: cannot truncate
+  branches_L24_k0.47_r0.csv            no |pull| > 3 on either branch: 0.9862(18) unchanged
+  branches_L24_k0.47_r1.csv            first |pull|>3 at g=0.30 BELOW/AT the crossing 1.5521: cannot truncate
+  branches_L24_k0.53_r0.csv            no |pull| > 3 on either branch: 0.7201(15) unchanged
+  branches_L24_k0.53_r1.csv            no |pull| > 3 on either branch: 1.1272(25) unchanged
+  branches_L24_k0.625_r0.csv           first |pull|>3 at g=1.40 BELOW/AT the crossing 1.3256: cannot truncate
+
+Branch sets: 54 = 18 (kappa, r) cases x 3 templates (FM, <2>, <3>) on 12x12; 15 more on 24x24 reported separately; 46 = 23 Table III crossings (18 on 12x12, 5 on 24x24) x the 2 branches that enter each crossing (FM or <2>, and <3>); the third template of each case does not enter Table III

@@ -1,0 +1,29 @@
+{
+  "args": {
+    "results_dir": "10_results/bilayer_annni_paper_results/reanalysis_v3/sse_validation/branches_gtop5",
+    "part": "branches",
+    "L": 12,
+    "T": 0.15,
+    "kappa": 0.75,
+    "rperps": "0,1",
+    "rperp": 1.0,
+    "control_code": 3,
+    "control_g": 0.05,
+    "codes": "1",
+    "g_top": 5.0,
+    "g_max_up": 0.1,
+    "chains": 6,
+    "therm": null,
+    "meas": null,
+    "threads": 10
+  },
+  "numba": "0.60.0",
+  "ascending_wall_s": 6.853663682937622,
+  "descending_wall_s": 401.460942029953,
+  "E_classical": {
+    "uniform": -1.75,
+    "<2>": -2.25,
+    "<3>": -2.083333333333333
+  },
+  "wall_s": 408.31767559051514
+}

@@ -1,0 +1,9 @@
+# Simulations and analysis (pinned; the SSE engine was run with exactly these versions)
+python_version == "3.11"
+numpy==2.0.2
+numba==0.60.0
+llvmlite==0.43.0
+scipy==1.17.1
+pandas==3.0.6
+# Figures only (any recent version)
+matplotlib>=3.8

@@ -1,0 +1,2 @@
+2x6 layer, kappa=0.3, r=0 (production settings, new seeds): N=12; rich: max|f_TI - F_ED| = 7.65e-04 (typ. se 5.8e-04), max|z| = 1.93, mean z = -0.06; trap: max|dF| = 9.38e-04, max|z| = 2.13; m_x vs ED max|z| = 2.16
+2x6 layer, kappa=0.3, r=0 (4x sweeps, original seeds): N=12; rich: max|f_TI - F_ED| = 8.29e-04 (typ. se 2.7e-04), max|z| = 4.07, mean z = +1.46; trap: max|dF| = 7.19e-04, max|z| = 2.56; m_x vs ED max|z| = 3.31

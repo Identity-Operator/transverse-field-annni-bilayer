@@ -1,0 +1,115 @@
+{
+  "args": {
+    "results_dir": "10_results/bilayer_annni_paper_results",
+    "sizes": "12,24",
+    "kappas": "0,0.25,0.5,0.75,1.0,1.5",
+    "rperps": "0,1",
+    "g": 0.05,
+    "T": 0.15,
+    "g_start": 3.0,
+    "g_start_coupled": 5.0,
+    "tag": "",
+    "n_steps": 16,
+    "anneal_therm": 2000,
+    "therm": 5000,
+    "meas": 5000,
+    "chains": 6,
+    "threads": 10,
+    "tol": 0.005
+  },
+  "flags": [
+    {
+      "L": 12,
+      "kappa": 0.75,
+      "rperp": 0.0,
+      "E0": -1.75,
+      "E_max": -1.5830193750000003,
+      "excess_max": 0.16698062499999966,
+      "n_chains_above_tol": 6
+    },
+    {
+      "L": 12,
+      "kappa": 0.75,
+      "rperp": 1.0,
+      "E0": -2.25,
+      "E_max": -2.0832198958333326,
+      "excess_max": 0.16678010416666744,
+      "n_chains_above_tol": 6
+    },
+    {
+      "L": 24,
+      "kappa": 0.25,
+      "rperp": 0.0,
+      "E0": -1.75,
+      "E_max": -1.7085426302083337,
+      "excess_max": 0.041457369791666254,
+      "n_chains_above_tol": 3
+    },
+    {
+      "L": 24,
+      "kappa": 0.25,
+      "rperp": 1.0,
+      "E0": -2.25,
+      "E_max": -2.1666481510416675,
+      "excess_max": 0.08335184895833248,
+      "n_chains_above_tol": 1
+    },
+    {
+      "L": 24,
+      "kappa": 0.75,
+      "rperp": 0.0,
+      "E0": -1.75,
+      "E_max": -1.6634985937500002,
+      "excess_max": 0.0865014062499998,
+      "n_chains_above_tol": 6
+    },
+    {
+      "L": 24,
+      "kappa": 0.75,
+      "rperp": 1.0,
+      "E0": -2.25,
+      "E_max": -2.1605618749999995,
+      "excess_max": 0.08943812500000048,
+      "n_chains_above_tol": 6
+    },
+    {
+      "L": 24,
+      "kappa": 1.0,
+      "rperp": 0.0,
+      "E0": -2.0,
+      "E_max": -1.8304066666666674,
+      "excess_max": 0.1695933333333326,
+      "n_chains_above_tol": 6
+    },
+    {
+      "L": 24,
+      "kappa": 1.0,
+      "rperp": 1.0,
+      "E0": -2.5,
+      "E_max": -2.3205344531250005,
+      "excess_max": 0.1794655468749995,
+      "n_chains_above_tol": 6
+    },
+    {
+      "L": 24,
+      "kappa": 1.5,
+      "rperp": 0.0,
+      "E0": -2.5,
+      "E_max": -2.167066536458334,
+      "excess_max": 0.3329334635416661,
+      "n_chains_above_tol": 5
+    },
+    {
+      "L": 24,
+      "kappa": 1.5,
+      "rperp": 1.0,
+      "E0": -3.0,
+      "E_max": -2.6603336458333335,
+      "excess_max": 0.33966635416666646,
+      "n_chains_above_tol": 6
+    }
+  ],
+  "n_combinations": 24,
+  "max_excess_overall": 0.33966635416666646,
+  "numba": "0.60.0"
+}

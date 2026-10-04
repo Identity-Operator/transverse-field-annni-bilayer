@@ -1,0 +1,1 @@
+2x6 layer, kappa=0.3, r=0 (repeat: new seeds, 48 chains, 4x sweeps): N=12; rich: max|f_TI - F_ED| = 4.44e-04 (typ. se 2.4e-04), max|z| = 1.37, mean z = +0.61; trap: max|dF| = 5.16e-04, max|z| = 2.05; m_x vs ED max|z| = 2.61

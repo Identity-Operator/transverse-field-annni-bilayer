@@ -1,0 +1,23 @@
+{
+  "title": "Code and results for: Onset of a quantum Fisher-Selke sequence in the transverse-field ANNNI model and its bilayer",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "description": "<p>Code, result files and LaTeX source behind every table and figure of the paper <em>Onset of a quantum Fisher&ndash;Selke sequence in the transverse-field ANNNI model and its bilayer</em> (T.-V. Truong, V.-Q.-M. Nguyen, H.-L. Nguyen, T.-T. Nguyen, 2026). The paper derives the low-field phase diagram of the transverse-field ANNNI model on the square lattice and its bilayer near the multiphase point by perturbation theory to eighth order in the transverse field, and tests it with stochastic series expansion quantum Monte Carlo and thermodynamic integration, including a pre-registered test of the &lang;23&rang; phase. The repository contains the perturbation-theory scripts (exact rational arithmetic), the SSE engine, the simulation drivers, all branch data and analysis outputs, and the figure scripts. The README maps each table and figure to the script and result file that produce it.</p><p>Licenses: code under MIT; result files and figures under CC BY 4.0 (LICENSE-CC-BY-4.0.txt); the manuscript files are not covered by these licenses.</p>",
+  "keywords": [
+    "ANNNI model",
+    "transverse-field Ising model",
+    "order by disorder",
+    "modulated phases",
+    "perturbation theory",
+    "quantum Monte Carlo",
+    "stochastic series expansion",
+    "thermodynamic integration"
+  ],
+  "creators": [
+    {"name": "Truong, Tuan-Vu", "affiliation": "College of Natural Sciences, Can Tho University", "orcid": "0009-0005-6357-6060"},
+    {"name": "Nguyen, Vu-Quoc-Minh", "affiliation": "University of Science, Vietnam National University Ho Chi Minh City (VNU-HCM)", "orcid": "0009-0007-2748-5107"},
+    {"name": "Nguyen, Hoang-Long", "affiliation": "Identity Quantum Computing JSC", "orcid": "0009-0005-7922-9266"},
+    {"name": "Nguyen, Thanh-Tien", "affiliation": "College of Natural Sciences, Can Tho University", "orcid": "0000-0002-6678-3787"}
+  ]
+}
